@@ -1,0 +1,17 @@
+snippet cfn-CodePipeline-CustomActionType
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-customactiontype.html
+Type: "AWS::CodePipeline::CustomActionType"
+Properties:
+  Category: String,
+  ConfigurationProperties:
+    - ConfigurationProperties
+  InputArtifactDetails:
+    ArtifactDetails
+  OutputArtifactDetails:
+    ArtifactDetails
+  Provider: String
+  Settings:
+    Settings
+  Version: String
+
+endsnippet

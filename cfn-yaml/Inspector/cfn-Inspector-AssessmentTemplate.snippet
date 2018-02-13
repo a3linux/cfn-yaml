@@ -1,0 +1,12 @@
+snippet cfn-Inspector-AssessmentTemplate
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-inspector-assessmenttemplate.html
+Type: "AWS::Inspector::AssessmentTemplate"
+Properties:
+  AssessmentTargetArn: String
+  DurationInSeconds: Integer
+  AssessmentTemplateName: String
+  RulesPackageArns: 
+    - String
+  UserAttributesForFindings: 
+    - Resource Tag
+endsnippet

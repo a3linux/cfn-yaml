@@ -1,0 +1,23 @@
+snippet cfn-ECS-Service
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html
+Type: "AWS::ECS::Service"
+Properties: 
+  Cluster: String
+  DeploymentConfiguration:
+    DeploymentConfiguration
+  DesiredCount: Integer
+  HealthCheckGracePeriodSeconds: Integer
+  LaunchType: String
+  LoadBalancers:
+    - Load Balancer Objects, ...
+  NetworkConfiguration: 
+    NetworkConfiguration
+  PlacementConstraints: 
+   - PlacementConstraints, ...
+  PlacementStrategies: 
+   - PlacementStrategies, ...
+  PlatformVersion: String
+  Role: String
+  ServiceName: String
+  TaskDefinition: String
+endsnippet

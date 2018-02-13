@@ -1,0 +1,15 @@
+snippet cfn-Config-ConfigRule
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-configrule.html
+Type: "AWS::Config::ConfigRule"
+Properties:
+  ConfigRuleName: String
+  Description: String
+  InputParameters:
+    ParameterName : Value
+  MaximumExecutionFrequency: String
+  Scope:
+    Scope
+  Source:
+    Source
+
+endsnippet

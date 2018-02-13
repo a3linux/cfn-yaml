@@ -1,0 +1,14 @@
+snippet cfn-IAM-Role
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-role.html
+Type: "AWS::IAM::Role"
+Properties: 
+  AssumeRolePolicyDocument:
+    JSON object
+  ManagedPolicyArns:
+    - String
+  Path: String
+  Policies:
+    - Policies
+  RoleName: String
+
+endsnippet

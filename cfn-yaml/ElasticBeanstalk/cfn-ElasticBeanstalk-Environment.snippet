@@ -1,0 +1,20 @@
+snippet cfn-ElasticBeanstalk-Environment
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-beanstalk-environment.html
+Type: "AWS::ElasticBeanstalk::Environment"
+Properties:
+  ApplicationName: String
+  CNAMEPrefix: String
+  Description: String
+  EnvironmentName: String
+  OptionSettings: 
+    - OptionSetting
+  PlatformArn: String
+  SolutionStackName: String
+  Tags:
+    - Resource Tag, ...
+  TemplateName: String
+  Tier:
+    Environment Tier
+  VersionLabel: String
+
+endsnippet

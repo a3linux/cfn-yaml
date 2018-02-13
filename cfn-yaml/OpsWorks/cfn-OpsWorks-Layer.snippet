@@ -1,0 +1,33 @@
+snippet cfn-OpsWorks-Layer
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-layer.html
+Type: "AWS::OpsWorks::Layer"
+Properties:
+  Attributes:
+    String:String
+  AutoAssignElasticIps: Boolean
+  AutoAssignPublicIps: Boolean
+  CustomInstanceProfileArn: String
+  CustomRecipes:
+    Recipes
+  CustomJson:
+    JSON object
+  CustomSecurityGroupIds:
+    - String
+  EnableAutoHealing: Boolean
+  InstallUpdatesOnBoot: Boolean
+  LifecycleEventConfiguration:
+    LifeCycleEventConfiguration
+  LoadBasedAutoScaling:
+    LoadBasedAutoScaling
+  Name: String
+  Packages:
+    - String
+  Shortname: String
+  StackId: String
+  Tags: 
+  - Tags 
+  Type: String
+  VolumeConfigurations:
+    - VolumeConfiguration 
+
+endsnippet

@@ -1,0 +1,12 @@
+snippet cfn-Config-DeliveryChannel
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-deliverychannel.html
+Type: "AWS::Config::DeliveryChannel"
+Properties:
+  ConfigSnapshotDeliveryProperties:
+    Config snapshot delivery properties
+  Name: String
+  S3BucketName: String
+  S3KeyPrefix: String
+  SnsTopicARN: String
+
+endsnippet

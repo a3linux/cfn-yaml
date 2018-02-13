@@ -1,0 +1,11 @@
+snippet cfn-EC2-VPCEndpoint
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpoint.html
+Type: "AWS::EC2::VPCEndpoint"
+Properties: 
+  PolicyDocument: JSON object
+  RouteTableIds:
+    - String
+  ServiceName: String
+  VpcId: String
+
+endsnippet

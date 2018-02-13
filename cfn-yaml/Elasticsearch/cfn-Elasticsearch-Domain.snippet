@@ -1,0 +1,20 @@
+snippet cfn-Elasticsearch-Domain
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticsearch-domain.html
+Type: "AWS::Elasticsearch::Domain"
+Properties: 
+  AccessPolicies: JSON object
+  AdvancedOptions:
+    String: String
+  DomainName: String
+  EBSOptions:
+    EBSOptions
+  ElasticsearchClusterConfig:
+    ElasticsearchClusterConfig
+  ElasticsearchVersion: String
+  SnapshotOptions:
+    SnapshotOptions
+  Tags:
+    - Resource Tag
+  VPCOptions: 
+    VPCOptions
+endsnippet

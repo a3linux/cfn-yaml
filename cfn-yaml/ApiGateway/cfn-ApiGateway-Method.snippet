@@ -1,0 +1,22 @@
+snippet cfn-ApiGateway-Method
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-method.html
+Type: "AWS::ApiGateway::Method"
+Properties:
+  ApiKeyRequired: Boolean
+  AuthorizationType: String
+  AuthorizerId: String
+  HttpMethod: String
+  Integration:
+    Integration
+  MethodResponses:
+    - MethodResponse
+  OperationName: String
+  RequestModels:
+    String: String
+  RequestParameters:
+    String: Boolean
+  RequestValidatorId: String
+  ResourceId: String
+  RestApiId: String
+
+endsnippet

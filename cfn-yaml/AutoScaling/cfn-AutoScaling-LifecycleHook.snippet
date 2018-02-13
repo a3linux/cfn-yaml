@@ -1,0 +1,14 @@
+snippet cfn-AutoScaling-LifecycleHook
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-as-lifecyclehook.html
+Type: "AWS::AutoScaling::LifecycleHook"
+Properties:
+  AutoScalingGroupName: String
+  DefaultResult: String
+  HeartbeatTimeout: Integer
+  LifecycleHookName: String
+  LifecycleTransition: String
+  NotificationMetadata: String
+  NotificationTargetARN: String
+  RoleARN: String
+
+endsnippet

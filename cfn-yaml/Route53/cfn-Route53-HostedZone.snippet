@@ -1,0 +1,14 @@
+snippet cfn-Route53-HostedZone
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-hostedzone.html
+Type: "AWS::Route53::HostedZone"
+Properties: 
+  HostedZoneConfig:
+    HostedZoneConfig
+  HostedZoneTags:
+    -  HostedZoneTags
+  Name: String
+  QueryLoggingConfig: String
+  VPCs:
+    - HostedZoneVPCs 
+
+endsnippet

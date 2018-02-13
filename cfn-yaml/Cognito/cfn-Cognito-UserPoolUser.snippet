@@ -1,0 +1,16 @@
+snippet cfn-Cognito-UserPoolUser
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpooluser.html
+Type: "AWS::Cognito::UserPoolUser"
+Properties:
+  DesiredDeliveryMediums: 
+    - String
+  ForceAliasCreation: Boolean
+  UserAttributes: 
+    - AttributeType
+  MessageAction: String
+  Username: String
+  UserPoolId: String
+  ValidationData: 
+    - AttributeType
+
+endsnippet

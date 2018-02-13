@@ -1,0 +1,12 @@
+snippet cfn-RDS-DBSecurityGroup
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-security-group.html
+Type: "AWS::RDS::DBSecurityGroup"
+Properties:
+  EC2VpcId: String
+  DBSecurityGroupIngress:
+    - RDS Security Group Rule
+  GroupDescription: String
+  Tags:
+    - Resource Tag 
+ 
+endsnippet

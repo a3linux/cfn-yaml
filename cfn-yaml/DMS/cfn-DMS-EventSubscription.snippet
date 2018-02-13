@@ -1,0 +1,17 @@
+snippet cfn-DMS-EventSubscription
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-eventsubscription.html
+Type: "AWS::DMS::EventSubscription"
+Properties: 
+  Enabled: Boolean
+  EventCategories: 
+    - String
+  SnsTopicArn: String
+  SourceIds:
+    - String
+  SourceType: String
+  SubscriptionName: 
+    - String
+  Tags: 
+    - Resource Tag
+
+endsnippet

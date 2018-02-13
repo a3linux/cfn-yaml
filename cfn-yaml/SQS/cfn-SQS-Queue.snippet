@@ -1,0 +1,18 @@
+snippet cfn-SQS-Queue
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sqs-queues.html
+Type: "AWS::SQS::Queue"
+Properties:
+  ContentBasedDeduplication: Boolean
+  DelaySeconds: Integer
+  FifoQueue: Boolean
+  KmsMasterKeyId: String
+  KmsDataKeyReusePeriodSeconds: Integer
+  MaximumMessageSize: Integer
+  MessageRetentionPeriod: Integer
+  QueueName: String
+  ReceiveMessageWaitTimeSeconds: Integer
+  RedrivePolicy:
+    RedrivePolicy
+  VisibilityTimeout: Integer
+
+endsnippet

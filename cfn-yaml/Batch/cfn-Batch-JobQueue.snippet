@@ -1,0 +1,10 @@
+snippet cfn-Batch-JobQueue
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-jobqueue.html
+Type: "AWS::Batch::JobQueue"
+Properties:
+  ComputeEnvironmentOrder: 
+    - ComputeEnvironmentOrder 
+  Priority: Integer
+  State: String
+  JobQueueName: String
+endsnippet

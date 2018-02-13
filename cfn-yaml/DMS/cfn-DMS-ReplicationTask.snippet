@@ -1,0 +1,15 @@
+snippet cfn-DMS-ReplicationTask
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationtask.html
+Type: "AWS::DMS::ReplicationTask"
+Properties:
+  CdcStartTime: Timestamp
+  MigrationType: String
+  ReplicationInstanceArn: String
+  ReplicationTaskIdentifier: String
+  ReplicationTaskSettings: String
+  SourceEndpointArn: String
+  TableMappings: String
+  Tags: 
+    - Resource Tag
+  TargetEndpointArn: String
+endsnippet

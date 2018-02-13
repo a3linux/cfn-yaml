@@ -1,0 +1,15 @@
+snippet cfn-EC2-SecurityGroup
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-security-group.html
+Type: "AWS::EC2::SecurityGroup"
+Properties: 
+  GroupName: String
+  GroupDescription: String
+  SecurityGroupEgress:
+    - Security Group Rule
+  SecurityGroupIngress:
+    - Security Group Rule
+  Tags:
+    - Resource Tag
+  VpcId: String
+
+endsnippet

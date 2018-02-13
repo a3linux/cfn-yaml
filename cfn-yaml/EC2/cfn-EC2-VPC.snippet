@@ -1,0 +1,12 @@
+snippet cfn-EC2-VPC
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpc.html
+Type: "AWS::EC2::VPC"
+Properties: 
+  CidrBlock: String
+  EnableDnsSupport: Boolean
+  EnableDnsHostnames: Boolean
+  InstanceTenancy: String
+  Tags:
+    - Resource Tag 
+
+endsnippet

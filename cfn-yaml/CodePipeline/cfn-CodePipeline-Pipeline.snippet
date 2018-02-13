@@ -1,0 +1,15 @@
+snippet cfn-CodePipeline-Pipeline
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-pipeline.html
+Type: "AWS::CodePipeline::Pipeline"
+Properties:
+  ArtifactStore:
+    ArtifactStore
+  DisableInboundStageTransitions:
+    - DisableInboundStageTransitions
+  Name: String
+  RestartExecutionOnUpdate: Boolean
+  RoleArn: String
+  Stages:
+    - Stages
+
+endsnippet

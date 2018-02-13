@@ -1,0 +1,28 @@
+snippet cfn-EMR-Cluster
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emr-cluster.html
+Type: "AWS::EMR::Cluster"
+Properties: 
+  AdditionalInfo: JSON object
+  Applications:
+    - Applications
+  AutoScalingRole: String      
+  BootstrapActions:
+    - Bootstrap Actions
+  Configurations:
+    - Configurations        
+  CustomAmiId: String
+  EbsRootVolumeSize: Integer
+  Instances:
+    JobFlowInstancesConfig
+  JobFlowRole: String
+  LogUri: String
+  Name: String
+  ReleaseLabel: String
+  ScaleDownBehavior: String
+  SecurityConfiguration: String
+  ServiceRole: String
+  Tags:
+    - Resource Tag
+  VisibleToAllUsers: Boolean
+
+endsnippet

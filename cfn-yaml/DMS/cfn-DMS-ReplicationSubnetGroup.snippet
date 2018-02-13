@@ -1,0 +1,12 @@
+snippet cfn-DMS-ReplicationSubnetGroup
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationsubnet-group.html
+Type: "AWS::DMS::ReplicationSubnetGroup"
+Properties: 
+  ReplicationSubnetGroupIdentifier: String
+  ReplicationSubnetGroupDescription: String
+  SubnetIds:
+    - String
+  Tags:
+    - Resource Tag 
+
+endsnippet

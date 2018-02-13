@@ -1,0 +1,17 @@
+snippet cfn-ApiGateway-Authorizer
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-authorizer.html
+Type: "AWS::ApiGateway::Authorizer"
+Properties:
+  AuthType: String
+  AuthorizerCredentials: String
+  AuthorizerResultTtlInSeconds: Integer
+  AuthorizerUri: String
+  IdentitySource: String
+  IdentityValidationExpression: String
+  Name: String
+  ProviderARNs:
+    - String
+  RestApiId: String
+  Type: String
+
+endsnippet

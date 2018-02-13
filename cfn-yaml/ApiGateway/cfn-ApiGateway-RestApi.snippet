@@ -1,0 +1,18 @@
+snippet cfn-ApiGateway-RestApi
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-restapi.html
+Type: "AWS::ApiGateway::RestApi"
+Properties:
+  BinaryMediaTypes:
+    - String
+  Body: JSON object
+  BodyS3Location:
+    S3Location
+  CloneFrom: String
+  Description: String
+  EndpointConfiguration: EndpointConfiguration
+  FailOnWarnings: Boolean
+  Name: String
+  Parameters:
+    String: String
+
+endsnippet

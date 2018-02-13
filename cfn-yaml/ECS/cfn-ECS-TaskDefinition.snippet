@@ -1,0 +1,19 @@
+snippet cfn-ECS-TaskDefinition
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-taskdefinition.html
+Type: "AWS::ECS::TaskDefinition"
+Properties: 
+  Volumes:
+    - Volume Definition
+  Cpu: String
+  ExecutionRoleArn: String
+  Family: String
+  Memory: String
+  NetworkMode: String
+  PlacementConstraints:
+    - TaskDefinitionPlacementConstraint
+  RequiresCompatibilities:
+    - String
+  TaskRoleArn: String
+  ContainerDefinitions:
+    - Container Definition
+endsnippet

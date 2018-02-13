@@ -1,0 +1,13 @@
+snippet cfn-ApiGateway-ApiKey
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-apikey.html
+Type: "AWS::ApiGateway::ApiKey"
+Properties: 
+  CustomerId: String
+  Description: String
+  Enabled: Boolean
+  GenerateDistinctId: Boolean
+  Name: String
+  StageKeys:
+    - StageKey
+    - ...
+endsnippet

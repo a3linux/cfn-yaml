@@ -1,0 +1,22 @@
+snippet cfn-SSM-MaintenanceWindowTask
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-maintenancewindowtask.html
+Type: "AWS::SSM::MaintenanceWindowTask"
+Properties:
+  MaxErrors: String
+  Description: String
+  ServiceRoleArn: String
+  Priority: Integer
+  MaxConcurrency: String
+  Targets: 
+    - Target
+  Name: String
+  TaskArn: String
+  TaskInvocationParameters:
+    TaskInvocationParameters
+  WindowId: String
+  TaskParameters:
+    JSON object
+  TaskType: String
+  LoggingInfo: 
+    LoggingInfo
+endsnippet

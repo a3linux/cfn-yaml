@@ -1,0 +1,9 @@
+snippet cfn-ElastiCache-SecurityGroupIngress
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-security-group-ingress.html
+Type: "AWS::ElastiCache::SecurityGroupIngress"
+Properties:
+  CacheSecurityGroupName: String
+  EC2SecurityGroupName: String
+  EC2SecurityGroupOwnerId: String
+
+endsnippet

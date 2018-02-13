@@ -1,0 +1,11 @@
+snippet cfn-EMR-Step
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emr-step.html
+Type: "AWS::EMR::Step"
+Properties: 
+  ActionOnFailure: String
+  HadoopJarStep:
+    HadoopJarStepConfig
+  JobFlowId: String
+  Name: String
+
+endsnippet

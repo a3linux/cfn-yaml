@@ -1,0 +1,33 @@
+snippet cfn-AutoScaling-AutoScalingGroup
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html
+Type: "AWS::AutoScaling::AutoScalingGroup"
+Properties:
+  AvailabilityZones:
+    - String
+  Cooldown: String
+  DesiredCapacity: String
+  HealthCheckGracePeriod: Integer
+  HealthCheckType: String
+  InstanceId: String
+  LaunchConfigurationName: String
+  LifecycleHookSpecificationList: 
+    - LifecycleHookSpecification
+  LoadBalancerNames:
+    - String
+  MaxSize: String
+  MetricsCollection:
+    - MetricsCollection
+  MinSize: String
+  NotificationConfigurations:
+    - NotificationConfiguration
+  PlacementGroup: String
+  Tags:
+    - TagProperty
+  TargetGroupARNs:
+    - String
+  TerminationPolicies:
+    - String
+  VPCZoneIdentifier:
+    - String
+
+endsnippet

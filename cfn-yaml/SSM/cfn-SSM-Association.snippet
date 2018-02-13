@@ -1,0 +1,16 @@
+snippet cfn-SSM-Association
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-association.html
+Type: "AWS::SSM::Association"
+Properties: 
+  AssociationName: String
+  DocumentVersion: String
+  InstanceId: String
+  Name: String
+  Parameters:
+    String:
+      - String
+  ScheduleExpression: String
+  Targets:
+    - Targets
+
+endsnippet

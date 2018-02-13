@@ -1,0 +1,39 @@
+snippet cfn-Redshift-Cluster
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-cluster.html
+Type: "AWS::Redshift::Cluster"
+Properties: 
+  AllowVersionUpgrade: Boolean
+  AutomatedSnapshotRetentionPeriod: Integer
+  AvailabilityZone: String
+  ClusterParameterGroupName: String
+  ClusterSecurityGroups: 
+    - String
+  ClusterSubnetGroupName: String
+  ClusterType: String
+  ClusterVersion: String
+  DBName: String
+  ElasticIp: String
+  Encrypted: Boolean
+  HsmClientCertificateIdentifier: String
+  HsmConfigurationIdentifier: String
+  IamRoles: 
+    - String
+  KmsKeyId: String
+  LoggingProperties: 
+     LoggingProperties
+  MasterUsername: String
+  MasterUserPassword: String
+  NodeType: String
+  NumberOfNodes: Integer
+  OwnerAccount: String
+  Port: Integer
+  PreferredMaintenanceWindow: String
+  PubliclyAccessible: Boolean
+  SnapshotClusterIdentifier: String
+  SnapshotIdentifier: String
+  Tags:
+    - Resource Tag
+  VpcSecurityGroupIds:
+    - String
+
+endsnippet

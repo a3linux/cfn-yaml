@@ -1,0 +1,13 @@
+snippet cfn-RDS-OptionGroup
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-optiongroup.html
+Type: "AWS::RDS::OptionGroup"
+Properties: 
+  EngineName: String
+  MajorEngineVersion: String
+  OptionGroupDescription: String
+  OptionConfigurations:
+    - OptionConfiguration
+  Tags:
+    - Resource Tag 
+
+endsnippet

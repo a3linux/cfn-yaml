@@ -1,0 +1,18 @@
+snippet cfn-DAX-Cluster
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dax-cluster.html
+Type: "AWS::DAX::Cluster"
+Properties:
+      AvailabilityZones: [ String, ... ]
+      ClusterName: String
+      Description: String
+      IAMRoleARN: String
+      NodeType: String
+      NotificationTopicARN: String
+      ParameterGroupName: String
+      PreferredMaintenanceWindow: String
+      ReplicationFactor: Integer
+      SecurityGroupIds: [ String, ... ]
+      SubnetGroupName: String
+      Tags: { String:String, ... }
+         
+endsnippet

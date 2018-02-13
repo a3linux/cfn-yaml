@@ -1,0 +1,19 @@
+snippet cfn-SSM-PatchBaseline
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-patchbaseline.html
+Type: "AWS::SSM::PatchBaseline"
+Properties:
+  OperatingSystem: String
+  ApprovedPatches: 
+    - String
+  PatchGroups: 
+    - String
+  Description: String
+  ApprovedPatchesComplianceLevel: String
+  ApprovalRules:
+    RuleGroup
+  GlobalFilters:
+    PatchFilterGroup
+  Name: String
+  RejectedPatches: 
+    - String
+endsnippet

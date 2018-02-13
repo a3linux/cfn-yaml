@@ -1,0 +1,25 @@
+snippet cfn-CloudFormation-Init
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-init.html
+Resources: 
+  MyInstance: 
+    Type: "AWS::EC2::Instance"
+    Metadata: 
+      AWS::CloudFormation::Init: 
+        config: 
+          packages: 
+            :
+          groups: 
+            :
+          users: 
+            :
+          sources: 
+            :
+          files: 
+            :
+          commands: 
+            :
+          services: 
+            :
+    Properties: 
+      :
+endsnippet

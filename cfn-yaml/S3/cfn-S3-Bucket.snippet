@@ -1,0 +1,34 @@
+snippet cfn-S3-Bucket
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket.html
+Type: "AWS::S3::Bucket"
+Properties: 
+  AccessControl: String
+  AccelerateConfiguration:
+    AccelerateConfiguration
+  AnalyticsConfigurations:
+    - AnalyticsConfiguration
+  BucketEncryption: 
+    BucketEncryption
+  BucketName: String
+  CorsConfiguration:
+    CorsConfiguration
+  InventoryConfigurations:
+    - InventoryConfiguration 
+  LifecycleConfiguration:
+    LifecycleConfiguration
+  LoggingConfiguration:
+    LoggingConfiguration
+  MetricsConfigurations: 
+    - MetricsConfiguration
+  NotificationConfiguration:
+    NotificationConfiguration
+  ReplicationConfiguration:
+    ReplicationConfiguration
+  Tags:
+    - Resource Tag
+  VersioningConfiguration:
+    VersioningConfiguration
+  WebsiteConfiguration:
+    WebsiteConfiguration
+
+endsnippet

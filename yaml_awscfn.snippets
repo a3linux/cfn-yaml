@@ -1,0 +1,3372 @@
+snippet cfn-Start
+AWSTemplateFormatVersion: "2010-09-09"
+Description:
+  String
+Metadata:
+  template metadata
+Parameters:
+  set of parameters
+Mappings:
+  set of mappings
+Conditions:
+  set of conditions
+Resources:
+  set of resources
+Outputs:
+  set of outputs
+endsnippet
+
+snippet cfn-CodeBuild-Project
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-project.html
+Type: "AWS::CodeBuild::Project"
+Properties: 
+  Artifacts:
+    Artifacts
+  BadgeEnabled: Boolean
+  Cache: 
+    ProjectCache
+  Description: String
+  EncryptionKey: String
+  Environment:
+    Environment
+  Name: String
+  ServiceRole: String
+  Source:
+    Source
+  Tags:
+    - Resource Tag
+  TimeoutInMinutes: Integer
+  VpcConfig: 
+    VpcConfig
+endsnippet
+snippet cfn-WAFRegional-Rule
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafregional-rule.html
+Type: "AWS::WAFRegional::Rule"
+Properties: 
+  MetricName: String
+  Name: String
+  Predicates:
+    - Predicate 
+
+endsnippet
+snippet cfn-WAFRegional-ByteMatchSet
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafregional-bytematchset.html
+Type: "AWS::WAFRegional::ByteMatchSet"
+Properties: 
+  ByteMatchTuples:
+    - Byte match tuple
+  Name: String
+
+endsnippet
+snippet cfn-WAFRegional-WebACL
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafregional-webacl.html
+Type: "AWS::WAFRegional::WebACL"
+Properties: 
+  DefaultAction:
+    Action
+  MetricName: String
+  Name: String
+  Rules:
+    - Rule 
+
+endsnippet
+snippet cfn-WAFRegional-SqlInjectionMatchSet
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafregional-sqlinjectionmatchset.html
+Type: "AWS::WAFRegional::SqlInjectionMatchSet"
+Properties: 
+  Name: String
+  SqlInjectionMatchTuples:
+    - SqlInjectionMatchTuple 
+
+endsnippet
+snippet cfn-WAFRegional-WebACLAssociation
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafregional-webaclassociation.html
+Type: "AWS::WAFRegional::WebACLAssociation"
+Properties: 
+  ResourceArn: String
+  WebACLId: String
+
+endsnippet
+snippet cfn-WAFRegional-XssMatchSet
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafregional-xssmatchset.html
+Type: "AWS::WAFRegional::XssMatchSet"
+Properties: 
+  Name: String
+  XssMatchTuples:
+    - XssMatchTuple 
+
+endsnippet
+snippet cfn-WAFRegional-IPSet
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafregional-ipset.html
+Type: "AWS::WAFRegional::IPSet"
+Properties: 
+  IPSetDescriptors:
+    - IPSet descriptor
+  Name: String
+
+endsnippet
+snippet cfn-WAFRegional-SizeConstraintSet
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafregional-sizeconstraintset.html
+Type: "AWS::WAFRegional::SizeConstraintSet"
+Properties: 
+  Name: String
+  SizeConstraints:
+    - SizeConstraint 
+
+endsnippet
+snippet cfn-Kinesis-Stream
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesis-stream.html
+Type: "AWS::Kinesis::Stream"
+Properties: 
+  Name: String
+  RetentionPeriodHours: Integer
+  ShardCount: Integer
+  StreamEncryption: Kinesis  StreamEncryption
+  Tags:
+    - Resource Tag 
+
+endsnippet
+snippet cfn-SSM-Association
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-association.html
+Type: "AWS::SSM::Association"
+Properties: 
+  AssociationName: String
+  DocumentVersion: String
+  InstanceId: String
+  Name: String
+  Parameters:
+    String:
+      - String
+  ScheduleExpression: String
+  Targets:
+    - Targets
+
+endsnippet
+snippet cfn-SSM-MaintenanceWindowTask
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-maintenancewindowtask.html
+Type: "AWS::SSM::MaintenanceWindowTask"
+Properties:
+  MaxErrors: String
+  Description: String
+  ServiceRoleArn: String
+  Priority: Integer
+  MaxConcurrency: String
+  Targets: 
+    - Target
+  Name: String
+  TaskArn: String
+  TaskInvocationParameters:
+    TaskInvocationParameters
+  WindowId: String
+  TaskParameters:
+    JSON object
+  TaskType: String
+  LoggingInfo: 
+    LoggingInfo
+endsnippet
+snippet cfn-SSM-Parameter
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-parameter.html
+Type: "AWS::SSM::Parameter"
+Properties: 
+  Name: String
+  Description: String
+  Type: String
+  Value: String
+  AllowedPattern: String
+
+endsnippet
+snippet cfn-SSM-MaintenanceWindow
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-maintenancewindow.html
+Type: "AWS::SSM::MaintenanceWindow"
+Properties:
+  Description: String
+  AllowUnassociatedTargets: Boolean
+  Cutoff: Integer
+  Schedule: String
+  Duration: Integer
+  Name: String
+endsnippet
+snippet cfn-SSM-MaintenanceWindowTarget
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-maintenancewindowtarget.html
+Type: "AWS::SSM::MaintenanceWindowTarget"
+Properties:
+  OwnerInformation: String
+  Description: String
+  WindowId: String
+  ResourceType: String
+  Targets: 
+    - Targets
+  Name: String
+endsnippet
+snippet cfn-SSM-PatchBaseline
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-patchbaseline.html
+Type: "AWS::SSM::PatchBaseline"
+Properties:
+  OperatingSystem: String
+  ApprovedPatches: 
+    - String
+  PatchGroups: 
+    - String
+  Description: String
+  ApprovedPatchesComplianceLevel: String
+  ApprovalRules:
+    RuleGroup
+  GlobalFilters:
+    PatchFilterGroup
+  Name: String
+  RejectedPatches: 
+    - String
+endsnippet
+snippet cfn-SSM-Document
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-document.html
+Type: "AWS::SSM::Document"
+Properties: 
+  Content: JSON object
+  DocumentType: String
+
+endsnippet
+snippet cfn-KMS-Key
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kms-key.html
+Type: "AWS::KMS::Key"
+Properties: 
+  Description: String
+  Enabled: Boolean
+  EnableKeyRotation: Boolean
+  KeyPolicy: JSON object
+  Tags:
+    - Resource Tag
+
+endsnippet
+snippet cfn-KMS-Alias
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kms-alias.html
+Type: "AWS::KMS::Alias"
+Properties:
+  AliasName: String
+  TargetKeyId: String
+
+endsnippet
+snippet cfn-CloudWatch-Alarm
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cw-alarm.html
+Type: "AWS::CloudWatch::Alarm"
+Properties:
+  ActionsEnabled: Boolean
+  AlarmActions:
+    - String
+  AlarmDescription: String
+  AlarmName: String
+  ComparisonOperator: String
+  Dimensions:
+    - Dimension
+  EvaluateLowSampleCountPercentile: String
+  EvaluationPeriods: Integer
+  ExtendedStatistic: String
+  InsufficientDataActions:
+    - String
+  MetricName: String
+  Namespace: String
+  OKActions:
+    - String
+  Period: Integer
+  Statistic: String
+  Threshold: Double
+  TreatMissingData: String
+  Unit: String
+endsnippet
+snippet cfn-CloudWatch-Dashboard
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cw-dashboard.html
+Type: "AWS::CloudWatch::Dashboard"
+Properties:
+      DashboardName: String
+      DashboardBody: String
+endsnippet
+snippet cfn-Glue-Table
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-table.html
+Type: "AWS::Glue::Table"
+Properties:
+  TableInput: 
+    TableInput
+  DatabaseName: String
+  CatalogId: String
+endsnippet
+snippet cfn-Glue-Crawler
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-crawler.html
+Type: "AWS::Glue::Crawler"
+Properties:
+  Role: String
+  Classifiers: 
+    - String
+  Description: String
+  SchemaChangePolicy: 
+    SchemaChangePolicy
+  Schedule: 
+    Schedule
+  DatabaseName: String
+  Targets: 
+    Targets
+  TablePrefix: String
+  Name: String
+endsnippet
+snippet cfn-Glue-Database
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-database.html
+Type: "AWS::Glue::Database"
+Properties:
+  DatabaseInput: 
+    DatabaseInput
+  CatalogId: String
+endsnippet
+snippet cfn-Glue-Connection
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-connection.html
+Type: "AWS::Glue::Connection"
+Properties:
+  ConnectionInput: 
+    ConnectionInput
+  CatalogId: String
+endsnippet
+snippet cfn-Glue-Job
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-job.html
+Type: "AWS::Glue::Job"
+Properties:
+  Role: String
+  DefaultArguments: JSON object
+  Connections: 
+    ConnectionsList
+  MaxRetries: Double
+  Description: String
+  LogUri: String
+  Command: 
+    JobCommand
+  AllocatedCapacity: Double
+  ExecutionProperty: 
+    ExecutionProperty
+  Name: String
+endsnippet
+snippet cfn-Glue-Trigger
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-trigger.html
+Type: "AWS::Glue::Trigger"
+Properties:
+  Type: String
+  Description: String
+  Actions: 
+    - Action 
+  Schedule: String
+  Name: String
+  Predicate: 
+    Predicate
+endsnippet
+snippet cfn-Glue-Classifier
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-classifier.html
+Type: "AWS::Glue::Classifier"
+Properties:
+  GrokClassifier: 
+    GrokClassifier
+endsnippet
+snippet cfn-Glue-DevEndpoint
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-devendpoint.html
+Type: "AWS::Glue::DevEndpoint"
+Properties:
+  EndpointName: String
+  ExtraJarsS3Path: String
+  ExtraPythonLibsS3Path: String
+  NumberOfNodes: Integer
+  PublicKey: String
+  RoleArn: String
+  SecurityGroupIds: 
+    - String
+  SubnetId: String
+endsnippet
+snippet cfn-Glue-Partition
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-partition.html
+Type: "AWS::Glue::Partition"
+Properties:
+  TableName: String
+  DatabaseName: String
+  CatalogId: String
+  PartitionInput: 
+    PartitionInput
+endsnippet
+snippet cfn-S3-Bucket
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket.html
+Type: "AWS::S3::Bucket"
+Properties: 
+  AccessControl: String
+  AccelerateConfiguration:
+    AccelerateConfiguration
+  AnalyticsConfigurations:
+    - AnalyticsConfiguration
+  BucketEncryption: 
+    BucketEncryption
+  BucketName: String
+  CorsConfiguration:
+    CorsConfiguration
+  InventoryConfigurations:
+    - InventoryConfiguration 
+  LifecycleConfiguration:
+    LifecycleConfiguration
+  LoggingConfiguration:
+    LoggingConfiguration
+  MetricsConfigurations: 
+    - MetricsConfiguration
+  NotificationConfiguration:
+    NotificationConfiguration
+  ReplicationConfiguration:
+    ReplicationConfiguration
+  Tags:
+    - Resource Tag
+  VersioningConfiguration:
+    VersioningConfiguration
+  WebsiteConfiguration:
+    WebsiteConfiguration
+
+endsnippet
+snippet cfn-S3-BucketPolicy
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-policy.html
+Type: "AWS::S3::BucketPolicy"
+Properties: 
+  Bucket: String
+  PolicyDocument: JSON
+
+endsnippet
+snippet cfn-EMR-InstanceFleetConfig
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticmapreduce-instancefleetconfig.html
+Type: "AWS::EMR::InstanceFleetConfig"
+Properties: 
+  ClusterId: String
+  InstanceFleetType: String
+  InstanceTypeConfigs:
+    - InstanceTypeConfig
+  LaunchSpecifications:
+    InstanceFleetProvisioningSpecifications
+  Name: String
+  TargetOnDemandCapacity: Integer
+  TargetSpotCapacity: Integer
+endsnippet
+snippet cfn-EMR-SecurityConfiguration
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emr-securityconfiguration.html
+Type: "AWS::EMR::SecurityConfiguration"
+Properties: 
+  Name: String
+  SecurityConfiguration: String
+
+endsnippet
+snippet cfn-EMR-Cluster
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emr-cluster.html
+Type: "AWS::EMR::Cluster"
+Properties: 
+  AdditionalInfo: JSON object
+  Applications:
+    - Applications
+  AutoScalingRole: String      
+  BootstrapActions:
+    - Bootstrap Actions
+  Configurations:
+    - Configurations        
+  CustomAmiId: String
+  EbsRootVolumeSize: Integer
+  Instances:
+    JobFlowInstancesConfig
+  JobFlowRole: String
+  LogUri: String
+  Name: String
+  ReleaseLabel: String
+  ScaleDownBehavior: String
+  SecurityConfiguration: String
+  ServiceRole: String
+  Tags:
+    - Resource Tag
+  VisibleToAllUsers: Boolean
+
+endsnippet
+snippet cfn-EMR-InstanceGroupConfig
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emr-instancegroupconfig.html
+Type: "AWS::EMR::InstanceGroupConfig"
+Properties: 
+  AutoScalingPolicy:
+    AutoScalingPolicy
+  BidPrice: String
+  Configurations:
+    - Configuration
+  EbsConfiguration" :
+    EBSConfiguration
+  InstanceCount" : Integer
+  InstanceRole" : String
+  InstanceType" : String
+  JobFlowId": String
+  Market" : String
+  Name" : String
+
+endsnippet
+snippet cfn-EMR-Step
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emr-step.html
+Type: "AWS::EMR::Step"
+Properties: 
+  ActionOnFailure: String
+  HadoopJarStep:
+    HadoopJarStepConfig
+  JobFlowId: String
+  Name: String
+
+endsnippet
+snippet cfn-SNS-TopicPolicy
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sns-policy.html
+Type: "AWS::SNS::TopicPolicy"
+Properties:
+  PolicyDocument: PolicyDocument
+  Topics:
+    - List of SNS topic ARNs 
+
+endsnippet
+snippet cfn-SNS-Subscription
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sns-subscription.html
+Type: "AWS::SNS::Subscription"
+Properties:
+  Endpoint: String
+  Protocol: String
+  TopicArn: String
+
+endsnippet
+snippet cfn-SNS-Topic
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sns-topic.html
+Type: "AWS::SNS::Topic"
+Properties: 
+  DisplayName: String
+  Subscription:
+    SNS Subscription
+  TopicName: String
+
+endsnippet
+snippet cfn-Config-ConfigRule
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-configrule.html
+Type: "AWS::Config::ConfigRule"
+Properties:
+  ConfigRuleName: String
+  Description: String
+  InputParameters:
+    ParameterName : Value
+  MaximumExecutionFrequency: String
+  Scope:
+    Scope
+  Source:
+    Source
+
+endsnippet
+snippet cfn-Config-DeliveryChannel
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-deliverychannel.html
+Type: "AWS::Config::DeliveryChannel"
+Properties:
+  ConfigSnapshotDeliveryProperties:
+    Config snapshot delivery properties
+  Name: String
+  S3BucketName: String
+  S3KeyPrefix: String
+  SnsTopicARN: String
+
+endsnippet
+snippet cfn-Config-ConfigurationRecorder
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-configurationrecorder.html
+Type: "AWS::Config::ConfigurationRecorder"
+Properties:
+  Name: String
+  RecordingGroup:
+    Recording group
+  RoleARN: String
+
+endsnippet
+snippet cfn-Cognito-UserPoolGroup
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolgroup.html
+Type: "AWS::Cognito::UserPoolGroup"
+Properties:
+  Description: String
+  GroupName: String
+  Precedence: Number
+  RoleArn: String
+  UserPoolId: String
+endsnippet
+snippet cfn-Cognito-IdentityPoolRoleAttachment
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-identitypoolroleattachment.html
+Type: "AWS::Cognito::IdentityPoolRoleAttachment"
+Properties:
+  IdentityPoolId: String
+  RoleMappings: 
+    String to RoleMapping object map
+  Roles: 
+    String:String
+  
+
+endsnippet
+snippet cfn-Cognito-UserPoolUserToGroupAttachment
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolusertogroupattachment.html
+Type: "AWS::Cognito::UserPoolUserToGroupAttachment"
+Properties:
+  GroupName: String
+  Username: String
+  UserPoolId: String
+endsnippet
+snippet cfn-Cognito-UserPool
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html
+Type: "AWS::Cognito::UserPool"
+Properties:
+  AdminCreateUserConfig: 
+    AdminCreateUserConfig
+  AliasAttributes: 
+    - String
+  AutoVerifiedAttributes: 
+    - String
+  DeviceConfiguration: 
+    DeviceConfiguration
+  EmailConfiguration: 
+    EmailConfiguration
+  EmailVerificationMessage: String
+  EmailVerificationSubject: String
+  LambdaConfig: 
+    LambdaConfig
+  MfaConfiguration: String
+  Policies: 
+    Policies
+  UserPoolName: String
+  Schema: 
+    - SchemaAttribute
+  SmsAuthenticationMessage: String
+  SmsConfiguration: 
+    SmsConfiguration
+  SmsVerificationMessage: String
+  UserPoolTags: 
+    String: String
+
+endsnippet
+snippet cfn-Cognito-UserPoolClient
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html
+Type: "AWS::Cognito::UserPoolClient"
+Properties:
+    ClientName: String,
+    ExplicitAuthFlows: 
+      - String
+    GenerateSecret: Boolean
+    ReadAttributes: 
+      - String
+    RefreshTokenValidity: Integer
+    UserPoolId: String
+    WriteAttributes: 
+      - String
+
+endsnippet
+snippet cfn-Cognito-IdentityPool
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-identitypool.html
+Type: "AWS::Cognito::IdentityPool"
+Properties:
+  IdentityPoolName: String
+  AllowUnauthenticatedIdentities: Boolean
+  DeveloperProviderName: String
+  SupportedLoginProviders: 
+    String: String
+  CognitoIdentityProviders: 
+    - CognitoIdentityProvider
+  SamlProviderARNs: 
+    - String
+  OpenIdConnectProviderARNs: 
+    - String
+  CognitoStreams: 
+    - CognitoStreams
+  PushSync: 
+    - PushSync
+  CognitoEvents: 
+    String: String
+
+endsnippet
+snippet cfn-Cognito-UserPoolUser
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpooluser.html
+Type: "AWS::Cognito::UserPoolUser"
+Properties:
+  DesiredDeliveryMediums: 
+    - String
+  ForceAliasCreation: Boolean
+  UserAttributes: 
+    - AttributeType
+  MessageAction: String
+  Username: String
+  UserPoolId: String
+  ValidationData: 
+    - AttributeType
+
+endsnippet
+snippet cfn-Inspector-AssessmentTemplate
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-inspector-assessmenttemplate.html
+Type: "AWS::Inspector::AssessmentTemplate"
+Properties:
+  AssessmentTargetArn: String
+  DurationInSeconds: Integer
+  AssessmentTemplateName: String
+  RulesPackageArns: 
+    - String
+  UserAttributesForFindings: 
+    - Resource Tag
+endsnippet
+snippet cfn-Inspector-AssessmentTarget
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-inspector-assessmenttarget.html
+Type: "AWS::Inspector::AssessmentTarget"
+Properties:
+  AssessmentTargetName: String
+  ResourceGroupArn: String
+endsnippet
+snippet cfn-Inspector-ResourceGroup
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-inspector-resourcegroup.html
+Type: "AWS::Inspector::ResourceGroup"
+Properties:
+  ResourceGroupTags: 
+    - Resource Tag
+endsnippet
+snippet cfn-CloudFront-Distribution
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution.html
+Type: "AWS::CloudFront::Distribution"
+Properties:
+  DistributionConfig: 
+    DistributionConfig
+  Tags: 
+    - Tag
+
+endsnippet
+snippet cfn-CloudFront-StreamingDistribution
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-streamingdistribution.html
+Type: "AWS::CloudFront::StreamingDistribution"
+Properties:
+  StreamingDistributionConfig: StreamingDistributionConfig
+  Tags: 
+    - Tag
+endsnippet
+snippet cfn-CloudFront-CloudFrontOriginAccessIdentity
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-cloudfrontoriginaccessidentity.html
+Type: "AWS::CloudFront::CloudFrontOriginAccessIdentity"
+Properties:
+  CloudFrontOriginAccessIdentityConfig: CloudFrontOriginAccessIdentityConfig
+endsnippet
+snippet cfn-ElasticBeanstalk-ConfigurationTemplate
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-beanstalk-configurationtemplate.html
+Type: "AWS::ElasticBeanstalk::ConfigurationTemplate"
+Properties:
+  ApplicationName: String
+  Description: String
+  EnvironmentId: String
+  OptionSettings:
+    - ConfigurationOptionSetting
+  PlatformArn: String
+  SolutionStackName: String
+  SourceConfiguration:
+    SourceConfiguration
+
+endsnippet
+snippet cfn-ElasticBeanstalk-Environment
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-beanstalk-environment.html
+Type: "AWS::ElasticBeanstalk::Environment"
+Properties:
+  ApplicationName: String
+  CNAMEPrefix: String
+  Description: String
+  EnvironmentName: String
+  OptionSettings: 
+    - OptionSetting
+  PlatformArn: String
+  SolutionStackName: String
+  Tags:
+    - Resource Tag, ...
+  TemplateName: String
+  Tier:
+    Environment Tier
+  VersionLabel: String
+
+endsnippet
+snippet cfn-ElasticBeanstalk-ApplicationVersion
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-beanstalk-version.html
+Type: AWS::ElasticBeanstalk::ApplicationVersion
+Properties:
+  ApplicationName: String
+  Description: String
+  SourceBundle:
+    SourceBundle
+
+endsnippet
+snippet cfn-ElasticBeanstalk-Application
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-beanstalk.html
+Type: "AWS::ElasticBeanstalk::Application"
+Properties:
+  ApplicationName: String
+  Description: String
+  ResourceLifecycleConfig:
+     ApplicationResourceLifecycleConfig
+
+
+endsnippet
+snippet cfn-ECR-Repository
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecr-repository.html
+Type: "AWS::ECR::Repository"
+Properties: 
+  LifecyclePolicy:
+    LifecyclePolicy
+  RepositoryName: String
+  RepositoryPolicyText: JSON object
+
+endsnippet
+snippet cfn-DynamoDB-Table
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html
+Type: "AWS::DynamoDB::Table"
+Properties:
+  AttributeDefinitions:
+    - AttributeDefinition
+  GlobalSecondaryIndexes:
+    - GlobalSecondaryIndexes
+  KeySchema:
+    - KeySchema
+  LocalSecondaryIndexes:
+    - LocalSecondaryIndexes
+  ProvisionedThroughput:
+    ProvisionedThroughput
+  SSESpecification:
+    SSESpecification
+  StreamSpecification:
+    StreamSpecification
+  TableName: String
+  Tags: 
+    - Resource Tag
+  TimeToLiveSpecification: 
+    TimeToLiveSpecification
+
+endsnippet
+snippet cfn-ApplicationAutoScaling-ScalingPolicy
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationautoscaling-scalingpolicy.html
+Type : "AWS::ApplicationAutoScaling::ScalingPolicy"
+Properties: 
+  PolicyName: String
+  PolicyType: String
+  ResourceId: String
+  ScalableDimension: String
+  ScalingTargetId: String
+  ServiceNamespace: String
+  StepScalingPolicyConfiguration: 
+    StepScalingPolicyConfiguration
+  TargetTrackingScalingPolicyConfiguration: 
+    TargetTrackingScalingPolicyConfiguration
+
+endsnippet
+snippet cfn-ApplicationAutoScaling-ScalableTarget
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationautoscaling-scalabletarget.html
+Type: "AWS::ApplicationAutoScaling::ScalableTarget"
+Properties:
+  MaxCapacity: Integer
+  MinCapacity: Integer
+  ResourceId: String
+  RoleARN: String
+  ScalableDimension: String
+  ScheduledActions: 
+    - ScheduledAction
+  ServiceNamespace: String
+
+endsnippet
+snippet cfn-ECS-Service
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html
+Type: "AWS::ECS::Service"
+Properties: 
+  Cluster: String
+  DeploymentConfiguration:
+    DeploymentConfiguration
+  DesiredCount: Integer
+  HealthCheckGracePeriodSeconds: Integer
+  LaunchType: String
+  LoadBalancers:
+    - Load Balancer Objects, ...
+  NetworkConfiguration: 
+    NetworkConfiguration
+  PlacementConstraints: 
+   - PlacementConstraints, ...
+  PlacementStrategies: 
+   - PlacementStrategies, ...
+  PlatformVersion: String
+  Role: String
+  ServiceName: String
+  TaskDefinition: String
+endsnippet
+snippet cfn-ECS-Cluster
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-cluster.html
+Type: "AWS::ECS::Cluster"
+Properties:
+  ClusterName: String
+
+endsnippet
+snippet cfn-ECS-TaskDefinition
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-taskdefinition.html
+Type: "AWS::ECS::TaskDefinition"
+Properties: 
+  Volumes:
+    - Volume Definition
+  Cpu: String
+  ExecutionRoleArn: String
+  Family: String
+  Memory: String
+  NetworkMode: String
+  PlacementConstraints:
+    - TaskDefinitionPlacementConstraint
+  RequiresCompatibilities:
+    - String
+  TaskRoleArn: String
+  ContainerDefinitions:
+    - Container Definition
+endsnippet
+snippet cfn-ElasticLoadBalancing-LoadBalancer
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb.html
+Type: "AWS::ElasticLoadBalancing::LoadBalancer"
+Properties:
+  AccessLoggingPolicy:
+    AccessLoggingPolicy
+  AppCookieStickinessPolicy:
+    - AppCookieStickinessPolicy
+  AvailabilityZones:
+    - String
+  ConnectionDrainingPolicy:
+    ConnectionDrainingPolicy
+  ConnectionSettings:
+    ConnectionSettings
+  CrossZone: Boolean
+  HealthCheck:
+    HealthCheck
+  Instances:
+    - String
+  LBCookieStickinessPolicy:
+    - LBCookieStickinessPolicy
+  LoadBalancerName: String
+  Listeners:
+    - Listener
+  Policies:
+    - ElasticLoadBalancing Policy
+  Scheme: String,
+  SecurityGroups:
+    - Security Group
+  Subnets:
+    - String
+  Tags:
+    - Resource Tag
+
+endsnippet
+snippet cfn-DirectoryService-SimpleAD
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-directoryservice-simplead.html
+Type: "AWS::DirectoryService::SimpleAD"
+Properties:
+  CreateAlias: Boolean
+  Description: String
+  EnableSso: Boolean
+  Name: String
+  Password: String
+  ShortName: String
+  Size: String
+  VpcSettings:
+    VpcSettings
+
+endsnippet
+snippet cfn-DirectoryService-MicrosoftAD
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-directoryservice-microsoftad.html
+Type: "AWS::DirectoryService::MicrosoftAD"
+Properties:
+  CreateAlias: Boolean
+  EnableSso: Boolean
+  Name: String
+  Password: String
+  ShortName: String
+  VpcSettings:
+    VpcSettings
+
+endsnippet
+snippet cfn-WorkSpaces-Workspace
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspaces-workspace.html
+Type: "AWS::WorkSpaces::Workspace"
+Properties: 
+  BundleId: String
+  DirectoryId: String
+  UserName: String
+  RootVolumeEncryptionEnabled: Boolean
+  UserVolumeEncryptionEnabled: Boolean
+  VolumeEncryptionKey: String
+
+endsnippet
+snippet cfn-CodePipeline-CustomActionType
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-customactiontype.html
+Type: "AWS::CodePipeline::CustomActionType"
+Properties:
+  Category: String,
+  ConfigurationProperties:
+    - ConfigurationProperties
+  InputArtifactDetails:
+    ArtifactDetails
+  OutputArtifactDetails:
+    ArtifactDetails
+  Provider: String
+  Settings:
+    Settings
+  Version: String
+
+endsnippet
+snippet cfn-CodePipeline-Pipeline
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-pipeline.html
+Type: "AWS::CodePipeline::Pipeline"
+Properties:
+  ArtifactStore:
+    ArtifactStore
+  DisableInboundStageTransitions:
+    - DisableInboundStageTransitions
+  Name: String
+  RestartExecutionOnUpdate: Boolean
+  RoleArn: String
+  Stages:
+    - Stages
+
+endsnippet
+snippet cfn-ElasticLoadBalancingV2-LoadBalancer
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-loadbalancer.html
+Type: "AWS::ElasticLoadBalancingV2::LoadBalancer"
+Properties:
+  LoadBalancerAttributes:
+    - LoadBalancerAttributes
+  Name: String
+  Scheme: String
+  SecurityGroups:
+    - String
+  SubnetMappings:
+    - SubnetMapping
+  Subnets:
+    - String
+  Tags:
+    - Resource Tag
+  Type: String
+  IpAddressType: String
+
+endsnippet
+snippet cfn-ElasticLoadBalancingV2-ListenerRule
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-listenerrule.html
+Type: "AWS::ElasticLoadBalancingV2::ListenerRule"
+Properties:
+  Actions:
+    - Actions
+  Conditions:
+    - Conditions
+  ListenerArn: String
+  Priority: Integer
+
+endsnippet
+snippet cfn-ElasticLoadBalancingV2-Listener
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-listener.html
+Type: "AWS::ElasticLoadBalancingV2::Listener"
+Properties: 
+  Certificates:
+    - Certificate
+  DefaultActions:
+    - Action
+  LoadBalancerArn: String
+  Port: Integer
+  Protocol: String
+  SslPolicy: String
+
+endsnippet
+snippet cfn-ElasticLoadBalancingV2-ListenerCertificate
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-listenercertificate.html
+Type: "AWS::ElasticLoadBalancingV2::ListenerCertificate"
+Properties:
+  Certificates: 
+    - Certificate
+  ListenerArn: String
+endsnippet
+snippet cfn-ElasticLoadBalancingV2-TargetGroup
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-targetgroup.html
+Type: "AWS::ElasticLoadBalancingV2::TargetGroup"
+Properties:
+  HealthCheckIntervalSeconds: Integer
+  HealthCheckPath: String
+  HealthCheckPort: String
+  HealthCheckProtocol: String
+  HealthCheckTimeoutSeconds: Integer
+  HealthyThresholdCount: Integer
+  Matcher: Matcher
+  Name: String
+  Port: Integer
+  Protocol: String
+  Tags:
+    - Resource Tag
+  TargetGroupAttributes:
+    - TargetGroupAttributes
+  Targets:
+    - TargetDescription
+  TargetType: String
+  UnhealthyThresholdCount: Integer
+  VpcId: String
+
+endsnippet
+snippet cfn-SQS-QueuePolicy
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sqs-policy.html
+Type: "AWS::SQS::QueuePolicy"
+Properties: 
+  PolicyDocument: JSON
+  Queues:
+    - String 
+
+endsnippet
+snippet cfn-SQS-Queue
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sqs-queues.html
+Type: "AWS::SQS::Queue"
+Properties:
+  ContentBasedDeduplication: Boolean
+  DelaySeconds: Integer
+  FifoQueue: Boolean
+  KmsMasterKeyId: String
+  KmsDataKeyReusePeriodSeconds: Integer
+  MaximumMessageSize: Integer
+  MessageRetentionPeriod: Integer
+  QueueName: String
+  ReceiveMessageWaitTimeSeconds: Integer
+  RedrivePolicy:
+    RedrivePolicy
+  VisibilityTimeout: Integer
+
+endsnippet
+snippet cfn-IoT-TopicRule
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-topicrule.html
+Type: "AWS::IoT::TopicRule"
+Properties:
+  RuleName: String
+  TopicRulePayload: TopicRulePayLoad
+endsnippet
+snippet cfn-IoT-Policy
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-policy.html
+Type: "AWS::IoT::Policy"
+Properties:
+  PolicyDocument: JSON object
+  PolicyName: String
+endsnippet
+snippet cfn-IoT-Thing
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-thing.html
+Type: "AWS::IoT::Thing"
+Properties:
+  AttributePayload:
+    AttributePayload
+  ThingName: String
+endsnippet
+snippet cfn-IoT-Certificate
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-certificate.html
+Type: "AWS::IoT::Certificate"
+  Properties:
+    CertificateSigningRequest: String
+    Status: String
+endsnippet
+snippet cfn-IoT-PolicyPrincipalAttachment
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-policyprincipalattachment.html
+Type: "AWS::IoT::PolicyPrincipalAttachment"
+  Properties:
+    PolicyName: String
+    Principal: String
+endsnippet
+snippet cfn-IoT-ThingPrincipalAttachment
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-thingprincipalattachment.html
+Type: "AWS::IoT::ThingPrincipalAttachment"
+Properties:
+  Principal: String
+  ThingName: String
+endsnippet
+snippet cfn-Redshift-ClusterSecurityGroup
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-clustersecuritygroup.html
+Type: "AWS::Redshift::ClusterSecurityGroup"
+Properties: 
+  Description: String
+  Tags:
+    - Resource Tag
+
+endsnippet
+snippet cfn-Redshift-ClusterParameterGroup
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-clusterparametergroup.html
+Type: "AWS::Redshift::ClusterParameterGroup"
+Properties: 
+  Description: String
+  ParameterGroupFamily: String
+  Parameters:
+    - Parameter
+  Tags:
+    - Resource Tag
+
+endsnippet
+snippet cfn-Redshift-ClusterSubnetGroup
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-clustersubnetgroup.html
+Type: "AWS::Redshift::ClusterSubnetGroup"
+Properties: 
+  Description: String
+  SubnetIds:
+    - String
+  Tags:
+    - Resource Tag
+
+endsnippet
+snippet cfn-Redshift-ClusterSecurityGroupIngress
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-clustersecuritygroupingress.html
+Type: "AWS::Redshift::ClusterSecurityGroupIngress"
+Properties: 
+  ClusterSecurityGroupName: String
+  CIDRIP: String
+  EC2SecurityGroupName: String
+  EC2SecurityGroupOwnerId: String
+
+endsnippet
+snippet cfn-Redshift-Cluster
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-cluster.html
+Type: "AWS::Redshift::Cluster"
+Properties: 
+  AllowVersionUpgrade: Boolean
+  AutomatedSnapshotRetentionPeriod: Integer
+  AvailabilityZone: String
+  ClusterParameterGroupName: String
+  ClusterSecurityGroups: 
+    - String
+  ClusterSubnetGroupName: String
+  ClusterType: String
+  ClusterVersion: String
+  DBName: String
+  ElasticIp: String
+  Encrypted: Boolean
+  HsmClientCertificateIdentifier: String
+  HsmConfigurationIdentifier: String
+  IamRoles: 
+    - String
+  KmsKeyId: String
+  LoggingProperties: 
+     LoggingProperties
+  MasterUsername: String
+  MasterUserPassword: String
+  NodeType: String
+  NumberOfNodes: Integer
+  OwnerAccount: String
+  Port: Integer
+  PreferredMaintenanceWindow: String
+  PubliclyAccessible: Boolean
+  SnapshotClusterIdentifier: String
+  SnapshotIdentifier: String
+  Tags:
+    - Resource Tag
+  VpcSecurityGroupIds:
+    - String
+
+endsnippet
+snippet cfn-GameLift-Fleet
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html
+Type: "AWS::GameLift::Fleet"
+Properties: 
+  BuildId: String
+  Description: String
+  DesiredEC2Instances: Integer
+  EC2InboundPermissions:
+    - EC2InboundPermission
+  EC2InstanceType: String
+  LogPaths:
+    [ String, ... ]
+  MaxSize: Integer
+  MinSize: Integer
+  Name: String
+  ServerLaunchParameters: String
+  ServerLaunchPath: String
+
+endsnippet
+snippet cfn-GameLift-Build
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-build.html
+Type: "AWS::GameLift::Build"
+Properties: 
+  Name: String
+  StorageLocation:
+    StorageLocation
+  Version: String
+
+endsnippet
+snippet cfn-GameLift-Alias
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-alias.html
+Type: "AWS::GameLift::Alias"
+Properties: 
+  Name: String
+  Description: String
+  RoutingStrategy:
+    RoutingStrategy
+
+endsnippet
+snippet cfn-CloudTrail-Trail
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-trail.html
+Type: "AWS::CloudTrail::Trail"
+Properties:
+  CloudWatchLogsLogGroupArn: String
+  CloudWatchLogsRoleArn: String
+  EnableLogFileValidation: Boolean
+  EventSelectors:
+    - EventSelector
+  IncludeGlobalServiceEvents: Boolean
+  IsLogging: Boolean
+  IsMultiRegionTrail: Boolean
+  KMSKeyId: String
+  S3BucketName: String
+  S3KeyPrefix: String
+  SnsTopicName: String
+  Tags:
+    - Resource Tag
+  TrailName: String
+      
+endsnippet
+snippet cfn-IAM-UserToGroupAddition
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-addusertogroup.html
+Type: "AWS::IAM::UserToGroupAddition"
+Properties: 
+  GroupName: String
+  Users:
+    - User1 
+
+endsnippet
+snippet cfn-IAM-Policy
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-policy.html
+Type: "AWS::IAM::Policy"
+Properties: 
+  Groups:
+    - String
+  PolicyDocument: JSON object
+  PolicyName: String
+  Roles:
+    - String
+  Users:
+    - String
+
+endsnippet
+snippet cfn-IAM-InstanceProfile
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html
+Type: "AWS::IAM::InstanceProfile"
+Properties: 
+  Path: String
+  Roles:
+    - IAM Roles 
+  InstanceProfileName: String
+
+endsnippet
+snippet cfn-IAM-ManagedPolicy
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-managedpolicy.html
+Type: "AWS::IAM::ManagedPolicy"
+Properties: 
+  Description: String
+  Groups:
+    - String
+  Path: String
+  PolicyDocument: JSON object
+  Roles:
+    - String
+  Users:
+    - String
+  ManagedPolicyName: String
+
+endsnippet
+snippet cfn-IAM-Role
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-role.html
+Type: "AWS::IAM::Role"
+Properties: 
+  AssumeRolePolicyDocument:
+    JSON object
+  ManagedPolicyArns:
+    - String
+  Path: String
+  Policies:
+    - Policies
+  RoleName: String
+
+endsnippet
+snippet cfn-IAM-AccessKey
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-accesskey.html
+Type: "AWS::IAM::AccessKey"
+Properties: 
+  Serial: Integer
+  Status: String
+  UserName: String
+
+endsnippet
+snippet cfn-IAM-User
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-user.html
+Type: "AWS::IAM::User"
+Properties: 
+  Groups:
+    - String
+  LoginProfile:
+    LoginProfile Type
+  ManagedPolicyArns:
+    - String
+  Path: String
+  Policies:
+    - Policies
+  UserName: String
+
+endsnippet
+snippet cfn-IAM-Group
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-group.html
+Type: "AWS::IAM::Group"
+Properties:
+  GroupName: String
+  ManagedPolicyArns: [ String, ... ]
+  Path: String
+  Policies:
+    - Policies
+
+endsnippet
+snippet cfn-Cloud9-EnvironmentEC2
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloud9-environmentec2.html
+Type: "AWS::Cloud9::EnvironmentEC2"
+Properties:
+  Repositories: 
+    - Repository
+  OwnerArn: String
+  Description: String
+  AutomaticStopTimeMinutes: Integer
+  InstanceType: String
+  Name: String
+  SubnetId: String
+endsnippet
+snippet cfn-Logs-LogGroup
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-loggroup.html
+Type: "AWS::Logs::LogGroup"
+Properties: 
+  LogGroupName: String
+  RetentionInDays: Integer
+
+endsnippet
+snippet cfn-Logs-LogStream
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-logstream.html
+Type: "AWS::Logs::LogStream"
+Properties: 
+  LogGroupName: String
+  LogStreamName: String
+
+endsnippet
+snippet cfn-Logs-Destination
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-destination.html
+Type: "AWS::Logs::Destination"
+Properties: 
+  DestinationName: String
+  DestinationPolicy: String
+  RoleArn: String
+  TargetArn: String
+
+endsnippet
+snippet cfn-Logs-SubscriptionFilter
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-subscriptionfilter.html
+Type: "AWS::Logs::SubscriptionFilter"
+Properties: 
+  DestinationArn: String
+  FilterPattern: String
+  LogGroupName: String
+  RoleArn: String
+
+endsnippet
+snippet cfn-Logs-MetricFilter
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-metricfilter.html
+Type: "AWS::Logs::MetricFilter"
+Properties: 
+  FilterPattern: String
+  LogGroupName: String
+  MetricTransformations:
+    MetricTransformations
+
+endsnippet
+snippet cfn-KinesisAnalytics-ApplicationReferenceDataSource
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisanalytics-applicationreferencedatasource.html
+Type: "AWS::KinesisAnalytics::ApplicationReferenceDataSource"
+Properties:
+  ApplicationName: String
+  ReferenceDataSource: 
+    ReferenceDataSource
+endsnippet
+snippet cfn-KinesisAnalytics-Application
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisanalytics-application.html
+Type: "AWS::KinesisAnalytics::Application"
+Properties:
+  ApplicationName: String
+  ApplicationDescription: String
+  ApplicationCode: String
+  Inputs: 
+    - Input
+endsnippet
+snippet cfn-KinesisAnalytics-ApplicationOutput
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisanalytics-applicationoutput.html
+Type: "AWS::KinesisAnalytics::ApplicationOutput"
+Properties:
+  ApplicationName: String
+  Output: 
+    Output
+endsnippet
+snippet cfn-OpsWorks-ElasticLoadBalancerAttachment
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-elbattachment.html
+Type: "AWS::OpsWorks::ElasticLoadBalancerAttachment"
+Properties: 
+  ElasticLoadBalancerName: String
+  LayerId: String
+
+endsnippet
+snippet cfn-OpsWorks-Layer
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-layer.html
+Type: "AWS::OpsWorks::Layer"
+Properties:
+  Attributes:
+    String:String
+  AutoAssignElasticIps: Boolean
+  AutoAssignPublicIps: Boolean
+  CustomInstanceProfileArn: String
+  CustomRecipes:
+    Recipes
+  CustomJson:
+    JSON object
+  CustomSecurityGroupIds:
+    - String
+  EnableAutoHealing: Boolean
+  InstallUpdatesOnBoot: Boolean
+  LifecycleEventConfiguration:
+    LifeCycleEventConfiguration
+  LoadBasedAutoScaling:
+    LoadBasedAutoScaling
+  Name: String
+  Packages:
+    - String
+  Shortname: String
+  StackId: String
+  Tags: 
+  - Tags 
+  Type: String
+  VolumeConfigurations:
+    - VolumeConfiguration 
+
+endsnippet
+snippet cfn-OpsWorks-Stack
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-stack.html
+Type: "AWS::OpsWorks::Stack"
+Properties: 
+  AgentVersion: String
+  Attributes:
+    String:String
+  ChefConfiguration:
+    ChefConfiguration
+  CloneAppIds: 
+  - String
+  ClonePermissions: Boolean
+  ConfigurationManager:
+    StackConfigurationManager
+  CustomCookbooksSource:
+    Source
+  CustomJson: JSON
+  DefaultAvailabilityZone: String
+  DefaultInstanceProfileArn: String
+  DefaultOs: String
+  DefaultRootDeviceType: String
+  DefaultSshKeyName: String
+  DefaultSubnetId: String
+  EcsClusterArn: String
+  ElasticIps: 
+  - ElasticIp
+  HostnameTheme: String
+  Name: String
+  RdsDbInstances: 
+  - RdsDbInstance
+  ServiceRoleArn: String
+  SourceStackId: String
+  Tags: 
+  - Tags
+  UseCustomCookbooks: Boolean
+  UseOpsworksSecurityGroups: Boolean
+  VpcId: String
+
+endsnippet
+snippet cfn-OpsWorks-Instance
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-instance.html
+Type: "AWS::OpsWorks::Instance"
+Properties:
+  AgentVersion: String
+  AmiId: String
+  Architecture: String
+  AutoScalingType: String
+  AvailabilityZone: String
+  BlockDeviceMappings: 
+  - BlockDeviceMapping
+  EbsOptimized: Boolean
+  ElasticIps: 
+  - String
+  Hostname: String
+  InstallUpdatesOnBoot: Boolean
+  InstanceType: String
+  LayerIds: 
+  - String
+  Os: String
+  RootDeviceType: String
+  SshKeyName: String
+  StackId: String
+  SubnetId: String
+  Tenancy: String
+  TimeBasedAutoScaling:
+  TimeBasedAutoScaling
+  VirtualizationType: String
+  Volumes: 
+  - String
+
+endsnippet
+snippet cfn-OpsWorks-UserProfile
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-userprofile.html
+Type: "AWS::OpsWorks::UserProfile"
+Properties:
+  AllowSelfManagement: Boolean
+  IamUserArn: String
+  SshPublicKey: String
+  SshUsername: String
+
+endsnippet
+snippet cfn-OpsWorks-Volume
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-volume.html
+Type: "AWS::OpsWorks::Volume"
+Properties:
+  Ec2VolumeId: String
+  MountPoint: String
+  Name: String
+  StackId: String
+
+endsnippet
+snippet cfn-OpsWorks-App
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-app.html
+Type: "AWS::OpsWorks::App"
+Properties: 
+  AppSource:
+    Source
+  Attributes:
+    String: String
+  Description: String
+  DataSources: 
+    - DataSource
+  Domains:
+    - String
+  EnableSsl: Boolean
+  Environment:
+    - Environment
+  Name: String
+  Shortname: String
+  SslConfiguration:
+    SslConfiguration
+  StackId: String
+  Type: String
+
+endsnippet
+snippet cfn-KinesisFirehose-DeliveryStream
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisfirehose-deliverystream.html
+Type: "AWS::KinesisFirehose::DeliveryStream"
+Properties: 
+  DeliveryStreamName: String
+  DeliveryStreamType: String
+  ElasticsearchDestinationConfiguration:
+    ElasticsearchDestinationConfiguration
+  ExtendedS3DestinationConfiguration:
+    ExtendedS3DestinationConfiguration
+  KinesisStreamSourceConfiguration:
+    KinesisStreamSourceConfiguration
+  RedshiftDestinationConfiguration:
+    RedshiftDestinationConfiguration
+  S3DestinationConfiguration:
+    S3DestinationConfiguration
+
+endsnippet
+snippet cfn-CodeDeploy-DeploymentConfig
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codedeploy-deploymentconfig.html
+Type: "AWS::CodeDeploy::DeploymentConfig"
+Properties:
+  DeploymentConfigName: String
+  MinimumHealthyHosts:
+    MinimumHealthyHosts
+
+endsnippet
+snippet cfn-CodeDeploy-DeploymentGroup
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codedeploy-deploymentgroup.html
+Type: "AWS::CodeDeploy::DeploymentGroup"
+Properties:
+  AlarmConfiguration:
+    AlarmConfiguration
+  ApplicationName: String
+  AutoRollbackConfiguration: 
+    AutoRollbackConfiguration
+  AutoScalingGroups:
+    - String
+  Deployment:
+    Deployment
+  DeploymentConfigName: String
+  DeploymentGroupName: String
+  DeploymentStyle: 
+    DeploymentStyle
+  Ec2TagFilters:
+    - Ec2TagFilters
+  LoadBalancerInfo: 
+    LoadBalancerInfo
+  OnPremisesInstanceTagFilters:
+    - OnPremisesInstanceTagFilters
+  ServiceRoleArn: String
+  TriggerConfigurations:
+    - TriggerConfig
+
+endsnippet
+snippet cfn-CodeDeploy-Application
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codedeploy-application.html
+Type: "AWS::CodeDeploy::Application"
+Properties:
+  ApplicationName: String	    
+  ComputePlatform: String
+
+endsnippet
+snippet cfn-Batch-JobQueue
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-jobqueue.html
+Type: "AWS::Batch::JobQueue"
+Properties:
+  ComputeEnvironmentOrder: 
+    - ComputeEnvironmentOrder 
+  Priority: Integer
+  State: String
+  JobQueueName: String
+endsnippet
+snippet cfn-Batch-JobDefinition
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-jobdefinition.html
+Type: "AWS::Batch::JobDefinition"
+Properties:
+  Type: String
+  Parameters: Json object
+  ContainerProperties: 
+    ContainerProperties
+  JobDefinitionName: String
+  RetryStrategy: 
+    RetryStrategy
+endsnippet
+snippet cfn-Batch-ComputeEnvironment
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-computeenvironment.html
+Type: "AWS::Batch::ComputeEnvironment"
+Properties:
+  Type: String
+  ServiceRole: String
+  ComputeEnvironmentName: String
+  ComputeResources: 
+    ComputeResources
+  State: String
+endsnippet
+snippet cfn-SDB-Domain
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-simpledb.html
+Type: "AWS::SDB::Domain"
+Properties: 
+  Description: String
+endsnippet
+snippet cfn-Lambda-Alias
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-alias.html
+Type: "AWS::Lambda::Alias"
+Properties:     
+  Description: String         
+  FunctionName: String
+  FunctionVersion: String
+  Name: String
+  RoutingConfig: 
+    AliasRoutingConfiguration
+
+endsnippet
+snippet cfn-Lambda-Permission
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-permission.html
+Type: "AWS::Lambda::Permission"
+Properties: 
+  Action: String
+  EventSourceToken: String
+  FunctionName: String
+  Principal: String
+  SourceAccount: String
+  SourceArn: String
+
+endsnippet
+snippet cfn-Lambda-Function
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html
+Type: "AWS::Lambda::Function"
+Properties: 
+  Code:
+    Code
+  DeadLetterConfig:
+    DeadLetterConfig
+  Description: String
+  Environment:
+    Environment
+  FunctionName: String
+  Handler: String
+  KmsKeyArn: String
+  MemorySize: Integer
+  ReservedConcurrentExecutions: Integer
+  Role: String
+  Runtime: String
+  Timeout: Integer
+  TracingConfig:
+    TracingConfig
+  VpcConfig:
+    VPCConfig
+  Tags: 
+    Resource Tag
+
+endsnippet
+snippet cfn-Lambda-EventSourceMapping
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventsourcemapping.html
+Type: "AWS::Lambda::EventSourceMapping"
+Properties: 
+  BatchSize: Integer
+  Enabled: Boolean
+  EventSourceArn: String
+  FunctionName: String
+  StartingPosition: String
+
+endsnippet
+snippet cfn-Lambda-Version
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-version.html
+Type: "AWS::Lambda::Version"
+Properties:     
+  CodeSha256 : String
+  Description : String         
+  FunctionName : String
+endsnippet
+snippet cfn-ServiceDiscovery-Service
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-service.html
+Type: "AWS::ServiceDiscovery::Service"
+Properties:
+  Description: String
+  DnsConfig: 
+    DnsConfig
+  HealthCheckConfig: 
+    HealthCheckConfig
+  Name: String
+endsnippet
+snippet cfn-ServiceDiscovery-PrivateDnsNamespace
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-privatednsnamespace.html
+Type: "AWS::ServiceDiscovery::PrivateDnsNamespace"
+Properties:
+  Description: String
+  Vpc: String
+  Name: String
+endsnippet
+snippet cfn-ServiceDiscovery-PublicDnsNamespace
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-publicdnsnamespace.html
+Type: "AWS::ServiceDiscovery::PublicDnsNamespace"
+Properties:
+  Description: String
+  Name: String
+endsnippet
+snippet cfn-ServiceDiscovery-Instance
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-instance.html
+Type: "AWS::ServiceDiscovery::Instance"
+Properties:
+  InstanceAttributes: JSON object
+  InstanceId: String
+  ServiceId: String
+endsnippet
+snippet cfn-WAF-SqlInjectionMatchSet
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-waf-sqlinjectionmatchset.html
+Type: "AWS::WAF::SqlInjectionMatchSet"
+Properties: 
+  Name: String
+  SqlInjectionMatchTuples:
+    - SqlInjectionMatchTuple 
+
+endsnippet
+snippet cfn-WAF-SizeConstraintSet
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-waf-sizeconstraintset.html
+Type: "AWS::WAF::SizeConstraintSet"
+Properties: 
+  Name: String
+  SizeConstraints:
+    - SizeConstraint 
+
+endsnippet
+snippet cfn-WAF-XssMatchSet
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-waf-xssmatchset.html
+Type: "AWS::WAF::XssMatchSet"
+Properties: 
+  Name: String
+  XssMatchTuples:
+    - XssMatchTuple 
+
+endsnippet
+snippet cfn-WAF-Rule
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-waf-rule.html
+Type: "AWS::WAF::Rule"
+Properties: 
+  MetricName: String
+  Name: String
+  Predicates:
+    - Predicate 
+
+endsnippet
+snippet cfn-WAF-IPSet
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-waf-ipset.html
+Type: "AWS::WAF::IPSet"
+Properties: 
+  IPSetDescriptors:
+    - IPSet descriptor
+  Name: String
+
+endsnippet
+snippet cfn-WAF-ByteMatchSet
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-waf-bytematchset.html
+Type: "AWS::WAF::ByteMatchSet"
+Properties: 
+  ByteMatchTuples:
+    - Byte match tuple
+  Name: String
+
+endsnippet
+snippet cfn-WAF-WebACL
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-waf-webacl.html
+Type: "AWS::WAF::WebACL"
+Properties: 
+  DefaultAction:
+    Action
+  MetricName: String
+  Name: String
+  Rules:
+    - Rule 
+
+endsnippet
+snippet cfn-GuardDuty-ThreatIntelSet
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-guardduty-threatintelset.html
+Type: "AWS::GuardDuty::ThreatIntelSet"
+Properties:
+  Activate: Boolean
+  DetectorId: String
+  Format: String
+  Location: String
+  Name: String
+endsnippet
+snippet cfn-GuardDuty-Detector
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-guardduty-detector.html
+Type: "AWS::GuardDuty::Detector"
+Properties:
+  Enable: Boolean
+endsnippet
+snippet cfn-GuardDuty-IPSet
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-guardduty-ipset.html
+Type: "AWS::GuardDuty::IPSet"
+Properties:
+  Activate: Boolean
+  DetectorId: String
+  Format: String
+  Location: String
+  Name: String
+endsnippet
+snippet cfn-DAX-Cluster
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dax-cluster.html
+Type: "AWS::DAX::Cluster"
+Properties:
+      AvailabilityZones: [ String, ... ]
+      ClusterName: String
+      Description: String
+      IAMRoleARN: String
+      NodeType: String
+      NotificationTopicARN: String
+      ParameterGroupName: String
+      PreferredMaintenanceWindow: String
+      ReplicationFactor: Integer
+      SecurityGroupIds: [ String, ... ]
+      SubnetGroupName: String
+      Tags: { String:String, ... }
+         
+endsnippet
+snippet cfn-DAX-SubnetGroup
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dax-subnetgroup.html
+Type: "AWS::DAX::SubnetGroup"
+Properties:
+      SubnetGroupName: String
+      Description: String
+      SubnetIds: [ String, ... ]
+
+         
+endsnippet
+snippet cfn-DAX-ParameterGroup
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dax-parametergroup.html
+Type: "AWS::DAX::ParameterGroup"
+Properties:
+      ParameterGroupName: String
+      Description: String
+      ParameterNameValues: { String:String, ... }
+         
+endsnippet
+snippet cfn-DMS-ReplicationInstance
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationinstance.html
+Type: "AWS::DMS::ReplicationInstance"
+Properties:
+  AllocatedStorage: Integer
+  AutoMinorVersionUpgrade: Boolean
+  AvailabilityZone: String
+  EngineVersion: String
+  KmsKeyId: String
+  MultiAZ: Boolean
+  PreferredMaintenanceWindow: String
+  PubliclyAccessible: Boolean
+  ReplicationInstanceClass: String
+  ReplicationInstanceIdentifier: String
+  ReplicationSubnetGroupIdentifier: String
+  Tags: 
+    - Resource Tag
+  VpcSecurityGroupIds:
+    - String
+endsnippet
+snippet cfn-DMS-Endpoint
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-endpoint.html
+Type: "AWS::DMS::Endpoint"
+Properties:
+  CertificateArn: String
+  DatabaseName: String
+  DynamoDbSettings:
+    DynamoDbSettings
+  EndpointIdentifier: String
+  EndpointType: String
+  EngineName: String
+  ExtraConnectionAttributes: String
+  KmsKeyId: String
+  MongoDbSettings: 
+    MongoDbSettings
+  Password: String
+  Port: Integer
+  S3Settings:
+    S3Settings
+  ServerName: String
+  SslMode: String
+  Tags:
+    - Resource Tag
+  Username: String 
+
+endsnippet
+snippet cfn-DMS-ReplicationTask
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationtask.html
+Type: "AWS::DMS::ReplicationTask"
+Properties:
+  CdcStartTime: Timestamp
+  MigrationType: String
+  ReplicationInstanceArn: String
+  ReplicationTaskIdentifier: String
+  ReplicationTaskSettings: String
+  SourceEndpointArn: String
+  TableMappings: String
+  Tags: 
+    - Resource Tag
+  TargetEndpointArn: String
+endsnippet
+snippet cfn-DMS-ReplicationSubnetGroup
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationsubnet-group.html
+Type: "AWS::DMS::ReplicationSubnetGroup"
+Properties: 
+  ReplicationSubnetGroupIdentifier: String
+  ReplicationSubnetGroupDescription: String
+  SubnetIds:
+    - String
+  Tags:
+    - Resource Tag 
+
+endsnippet
+snippet cfn-DMS-EventSubscription
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-eventsubscription.html
+Type: "AWS::DMS::EventSubscription"
+Properties: 
+  Enabled: Boolean
+  EventCategories: 
+    - String
+  SnsTopicArn: String
+  SourceIds:
+    - String
+  SourceType: String
+  SubscriptionName: 
+    - String
+  Tags: 
+    - Resource Tag
+
+endsnippet
+snippet cfn-DMS-Certificate
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-certificate.html
+Type: "AWS::DMS::Certificate"
+Properties:
+  CertificateIdentifier: String
+  CertificatePem: String
+  CertificateWallet: String
+endsnippet
+snippet cfn-Events-Rule
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-rule.html
+Type: "AWS::Events::Rule"
+Properties: 
+  Description: String
+  EventPattern: JSON object
+  Name: String
+  ScheduleExpression: String
+  State: String
+  Targets:
+    - Target
+
+endsnippet
+snippet cfn-AutoScaling-ScalingPolicy
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-policy.html
+Type: "AWS::AutoScaling::ScalingPolicy"
+Properties:
+  AdjustmentType: String
+  AutoScalingGroupName: String
+  Cooldown: String
+  EstimatedInstanceWarmup: Integer
+  MetricAggregationType: String
+  MinAdjustmentMagnitude: Integer
+  PolicyType: String
+  ScalingAdjustment: Integer
+  StepAdjustments:
+    - StepAdjustments
+  TargetTrackingConfiguration:
+    TargetTrackingConfiguration
+endsnippet
+snippet cfn-AutoScaling-LaunchConfiguration
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig.html
+Type: "AWS::AutoScaling::LaunchConfiguration"
+Properties:
+  AssociatePublicIpAddress: Boolean
+  BlockDeviceMappings:
+    - BlockDeviceMapping
+  ClassicLinkVPCId: String
+  ClassicLinkVPCSecurityGroups:
+    - String
+  EbsOptimized: Boolean
+  IamInstanceProfile: String
+  ImageId: String
+  InstanceId: String
+  InstanceMonitoring: Boolean
+  InstanceType: String
+  KernelId: String
+  KeyName: String
+  PlacementTenancy: String
+  RamDiskId: String
+  SecurityGroups:
+    - SecurityGroup
+  SpotPrice: String
+  UserData: String
+
+endsnippet
+snippet cfn-AutoScaling-ScheduledAction
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-as-scheduledaction.html
+Type: AWS::AutoScaling::ScheduledAction
+Properties:
+  AutoScalingGroupName: String
+  DesiredCapacity: Integer
+  EndTime: Time stamp
+  MaxSize: Integer
+  MinSize: Integer
+  Recurrence: String
+  StartTime: Time stamp
+
+endsnippet
+snippet cfn-AutoScaling-AutoScalingGroup
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html
+Type: "AWS::AutoScaling::AutoScalingGroup"
+Properties:
+  AvailabilityZones:
+    - String
+  Cooldown: String
+  DesiredCapacity: String
+  HealthCheckGracePeriod: Integer
+  HealthCheckType: String
+  InstanceId: String
+  LaunchConfigurationName: String
+  LifecycleHookSpecificationList: 
+    - LifecycleHookSpecification
+  LoadBalancerNames:
+    - String
+  MaxSize: String
+  MetricsCollection:
+    - MetricsCollection
+  MinSize: String
+  NotificationConfigurations:
+    - NotificationConfiguration
+  PlacementGroup: String
+  Tags:
+    - TagProperty
+  TargetGroupARNs:
+    - String
+  TerminationPolicies:
+    - String
+  VPCZoneIdentifier:
+    - String
+
+endsnippet
+snippet cfn-AutoScaling-LifecycleHook
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-as-lifecyclehook.html
+Type: "AWS::AutoScaling::LifecycleHook"
+Properties:
+  AutoScalingGroupName: String
+  DefaultResult: String
+  HeartbeatTimeout: Integer
+  LifecycleHookName: String
+  LifecycleTransition: String
+  NotificationMetadata: String
+  NotificationTargetARN: String
+  RoleARN: String
+
+endsnippet
+snippet cfn-CloudFormation-Interface
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-interface.html
+Metadata:
+  AWS::CloudFormation::Interface:
+    ParameterGroups:
+      - ParameterGroup
+    ParameterLabels:
+      ParameterLabel
+
+endsnippet
+snippet cfn-CloudFormation-WaitConditionHandle
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-waitconditionhandle.html
+Type: "AWS::CloudFormation::WaitConditionHandle"
+Properties:
+endsnippet
+snippet cfn-CloudFormation-Authentication
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-authentication.html
+Type: "AWS::CloudFormation::Authentication"
+String:
+  accessKeyId: String
+  buckets:
+    - String
+  password: String
+  secretKey: String
+  type: String
+  uris:
+    - String
+  username: String
+  roleName: String
+
+endsnippet
+snippet cfn-CloudFormation-CustomResource
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cfn-customresource.html
+Type: "Custom::String"
+Version: "1.0"
+Properties:
+  ServiceToken: String
+    ... provider-defined properties ...
+
+endsnippet
+snippet cfn-CloudFormation-WaitCondition
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-waitcondition.html
+Type: "AWS::CloudFormation::WaitCondition"
+Properties: 
+  Count: Integer
+  Handle: String
+  Timeout: String
+
+endsnippet
+snippet cfn-CloudFormation-Stack
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-stack.html
+Type: "AWS::CloudFormation::Stack"
+Properties:
+  NotificationARNs:
+    - String
+  Parameters:
+    AWS CloudFormation Stack Parameters
+  Tags:
+    - Resource Tag
+  TemplateURL: String
+  TimeoutInMinutes: Integer
+
+endsnippet
+snippet cfn-CloudFormation-Init
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-init.html
+Resources: 
+  MyInstance: 
+    Type: "AWS::EC2::Instance"
+    Metadata: 
+      AWS::CloudFormation::Init: 
+        config: 
+          packages: 
+            :
+          groups: 
+            :
+          users: 
+            :
+          sources: 
+            :
+          files: 
+            :
+          commands: 
+            :
+          services: 
+            :
+    Properties: 
+      :
+endsnippet
+snippet cfn-ElastiCache-CacheCluster
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-cache-cluster.html
+Type: "AWS::ElastiCache::CacheCluster"
+Properties:
+  AutoMinorVersionUpgrade: Boolean
+  AZMode: String
+  CacheNodeType: String
+  CacheParameterGroupName: String
+  CacheSecurityGroupNames:
+    - String
+  CacheSubnetGroupName: String
+  ClusterName: String
+  Engine: String
+  EngineVersion: String
+  NotificationTopicArn: String
+  NumCacheNodes: Integer
+  Port: Integer
+  PreferredAvailabilityZone: String
+  PreferredAvailabilityZones:
+    - String
+  PreferredMaintenanceWindow: String
+  SnapshotArns:
+    - String
+  SnapshotName: String
+  SnapshotRetentionLimit: Integer
+  SnapshotWindow: String
+  Tags:
+    - Resource Tag
+  VpcSecurityGroupIds:
+    - String
+
+endsnippet
+snippet cfn-ElastiCache-SecurityGroup
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-security-group.html
+Type: "AWS::ElastiCache::SecurityGroup"
+Properties:
+  Description: String
+
+endsnippet
+snippet cfn-ElastiCache-ReplicationGroup
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html
+Type: "AWS::ElastiCache::ReplicationGroup"
+Properties: 
+  AtRestEncryptionEnabled: Boolean
+  AuthToken: String
+  AutomaticFailoverEnabled: Boolean
+  AutoMinorVersionUpgrade: Boolean
+  CacheNodeType: String
+  CacheParameterGroupName: String
+  CacheSecurityGroupNames:
+    - String
+  CacheSubnetGroupName: String
+  Engine: String
+  EngineVersion: String
+  NodeGroupConfiguration:
+    - NodeGroupConfiguration
+  NotificationTopicArn: String
+  NumCacheClusters: Integer
+  NumNodeGroups: Integer
+  Port: Integer
+  PreferredCacheClusterAZs:
+    - String
+  PreferredMaintenanceWindow: String
+  PrimaryClusterId: String
+  ReplicasPerNodeGroup: Integer
+  ReplicationGroupDescription: String
+  ReplicationGroupId: String
+  SecurityGroupIds:
+    - String
+  SnapshotArns:
+    - String
+  SnapshotName: String
+  SnapshotRetentionLimit: Integer
+  SnapshottingClusterId: String
+  SnapshotWindow: String
+  Tags
+    - Resource Tag
+  TransitEncryptionEnabled: Boolean
+endsnippet
+snippet cfn-ElastiCache-ParameterGroup
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-parameter-group.html
+Type: "AWS::ElastiCache::ParameterGroup"
+Properties: 
+  CacheParameterGroupFamily: String
+  Description: String
+  Properties:
+    String: String
+
+endsnippet
+snippet cfn-ElastiCache-SecurityGroupIngress
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-security-group-ingress.html
+Type: "AWS::ElastiCache::SecurityGroupIngress"
+Properties:
+  CacheSecurityGroupName: String
+  EC2SecurityGroupName: String
+  EC2SecurityGroupOwnerId: String
+
+endsnippet
+snippet cfn-ElastiCache-SubnetGroup 
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-subnetgroup.html
+Type: "AWS::ElastiCache::SubnetGroup"
+Properties:
+  CacheSubnetGroupName: String
+  Description: String
+  SubnetIds:
+    - String 
+
+endsnippet
+snippet cfn-RDS-DBInstance
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html
+Type: "AWS::RDS::DBInstance"
+Properties:
+  AllocatedStorage: String
+  AllowMajorVersionUpgrade: Boolean
+  AutoMinorVersionUpgrade: Boolean
+  AvailabilityZone: String
+  BackupRetentionPeriod: String
+  CharacterSetName: String
+  CopyTagsToSnapshot: Boolean
+  DBClusterIdentifier: String
+  DBInstanceClass: String
+  DBInstanceIdentifier: String
+  DBName: String
+  DBParameterGroupName: String
+  DBSecurityGroups:
+    - String
+  DBSnapshotIdentifier: String
+  DBSubnetGroupName: String
+  Domain: String
+  DomainIAMRoleName: String
+  Engine: String
+  EngineVersion: String
+  Iops: Number
+  KmsKeyId: String
+  LicenseModel: String
+  MasterUsername: String
+  MasterUserPassword: String
+  MonitoringInterval: Integer
+  MonitoringRoleArn: String
+  MultiAZ: Boolean
+  OptionGroupName: String
+  Port: String
+  PreferredBackupWindow: String
+  PreferredMaintenanceWindow: String
+  PubliclyAccessible: Boolean
+  SourceDBInstanceIdentifier: String
+  SourceRegion: String
+  StorageEncrypted: Boolean
+  StorageType: String
+  Tags:
+    Resource Tag
+  Timezone: String
+  VPCSecurityGroups:
+    - String
+
+endsnippet
+snippet cfn-RDS-DBSubnetGroup
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbsubnet-group.html
+Type: "AWS::RDS::DBSubnetGroup"
+Properties: 
+  DBSubnetGroupDescription: String
+  DBSubnetGroupName: String
+  SubnetIds:
+    - String
+  Tags:
+    - Resource Tag 
+
+endsnippet
+snippet cfn-RDS-EventSubscription
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-eventsubscription.html
+Type: "AWS::RDS::EventSubscription"
+Properties: 
+  Enabled: Boolean
+  EventCategories:
+    - String
+  SnsTopicArn: String
+  SourceIds:
+    - String
+  SourceType: String
+
+endsnippet
+snippet cfn-RDS-DBClusterParameterGroup
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbclusterparametergroup.html
+Type: "AWS::RDS::DBClusterParameterGroup"
+Properties: 
+  Description: String
+  Family: String
+  Parameters: DBParameters
+  Tags:
+    Resource Tag 
+
+endsnippet
+snippet cfn-RDS-DBParameterGroup
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbparametergroup.html
+Type: "AWS::RDS::DBParameterGroup"
+Properties: 
+  Description: String
+  Family: String
+  Parameters:
+    DBParameters
+  Tags:
+    - Resource Tag 
+
+endsnippet
+snippet cfn-RDS-DBSecurityGroupIngress
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-security-group-ingress.html
+Type: "AWS::RDS::DBSecurityGroupIngress"
+Properties:  
+  CIDRIP: String
+  DBSecurityGroupName: String
+  EC2SecurityGroupId: String
+  EC2SecurityGroupName: String
+  EC2SecurityGroupOwnerId: String
+
+endsnippet
+snippet cfn-RDS-DBCluster
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html
+Type: "AWS::RDS::DBCluster"
+Properties:
+  AvailabilityZones:
+    - String
+  BackupRetentionPeriod: Integer
+  DatabaseName: String
+  DBClusterParameterGroupName: String
+  DBSubnetGroupName: String
+  Engine: String
+  EngineVersion: String
+  KmsKeyId: String
+  MasterUsername: String
+  MasterUserPassword: String
+  Port: Integer
+  PreferredBackupWindow: String
+  PreferredMaintenanceWindow: String
+  ReplicationSourceIdentifier: String
+  SnapshotIdentifier: String
+  StorageEncrypted: Boolean
+  Tags:
+    - Resource Tag
+  VpcSecurityGroupIds:
+    - String
+
+endsnippet
+snippet cfn-RDS-OptionGroup
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-optiongroup.html
+Type: "AWS::RDS::OptionGroup"
+Properties: 
+  EngineName: String
+  MajorEngineVersion: String
+  OptionGroupDescription: String
+  OptionConfigurations:
+    - OptionConfiguration
+  Tags:
+    - Resource Tag 
+
+endsnippet
+snippet cfn-RDS-DBSecurityGroup
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-security-group.html
+Type: "AWS::RDS::DBSecurityGroup"
+Properties:
+  EC2VpcId: String
+  DBSecurityGroupIngress:
+    - RDS Security Group Rule
+  GroupDescription: String
+  Tags:
+    - Resource Tag 
+ 
+endsnippet
+snippet cfn-DataPipeline-Pipeline
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datapipeline-pipeline.html
+Type: "AWS::DataPipeline::Pipeline"
+Properties:
+  Activate: Boolean
+  Description: String
+  Name: String
+  ParameterObjects:
+    - Parameter object
+  ParameterValues:
+    - Parameter value
+  PipelineObjects:
+    - Pipeline object
+  PipelineTags:
+    - Pipeline tag
+
+endsnippet
+snippet cfn-StepFunctions-Activity
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-stepfunctions-activity.html
+Type: "AWS::StepFunctions::Activity"
+Properties:
+  Name: String
+endsnippet
+snippet cfn-StepFunctions-StateMachine
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-stepfunctions-statemachine.html
+Type: "AWS::StepFunctions::StateMachine"
+Properties:
+  StateMachineName: String
+  DefinitionString: String
+  RoleArn: String
+endsnippet
+snippet cfn-Elasticsearch-Domain
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticsearch-domain.html
+Type: "AWS::Elasticsearch::Domain"
+Properties: 
+  AccessPolicies: JSON object
+  AdvancedOptions:
+    String: String
+  DomainName: String
+  EBSOptions:
+    EBSOptions
+  ElasticsearchClusterConfig:
+    ElasticsearchClusterConfig
+  ElasticsearchVersion: String
+  SnapshotOptions:
+    SnapshotOptions
+  Tags:
+    - Resource Tag
+  VPCOptions: 
+    VPCOptions
+endsnippet
+snippet cfn-CodeCommit-Repository
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codecommit-repository.html
+Type: "AWS::CodeCommit::Repository"
+Properties: 
+  RepositoryDescription: String
+  RepositoryName: String
+  Triggers:
+  - Trigger
+endsnippet
+snippet cfn-ApiGateway-ClientCertificate
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-clientcertificate.html
+Type: "AWS::ApiGateway::ClientCertificate"
+Properties:
+  Description: String
+
+endsnippet
+snippet cfn-ApiGateway-Model
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-model.html
+Type: "AWS::ApiGateway::Model"
+Properties:
+  ContentType: String
+  Description: String
+  Name: String
+  RestApiId: String
+  Schema: JSON object
+
+endsnippet
+snippet cfn-ApiGateway-GatewayResponse
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-gatewayresponse.html
+Type: "AWS::ApiGateway::GatewayResponse"
+Properties:
+  ResponseParameters: 
+    String: String
+  ResponseTemplates: 
+    String: String
+  ResponseType: String
+  RestApiId: String
+  StatusCode: String
+endsnippet
+snippet cfn-ApiGateway-Authorizer
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-authorizer.html
+Type: "AWS::ApiGateway::Authorizer"
+Properties:
+  AuthType: String
+  AuthorizerCredentials: String
+  AuthorizerResultTtlInSeconds: Integer
+  AuthorizerUri: String
+  IdentitySource: String
+  IdentityValidationExpression: String
+  Name: String
+  ProviderARNs:
+    - String
+  RestApiId: String
+  Type: String
+
+endsnippet
+snippet cfn-ApiGateway-RestApi
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-restapi.html
+Type: "AWS::ApiGateway::RestApi"
+Properties:
+  BinaryMediaTypes:
+    - String
+  Body: JSON object
+  BodyS3Location:
+    S3Location
+  CloneFrom: String
+  Description: String
+  EndpointConfiguration: EndpointConfiguration
+  FailOnWarnings: Boolean
+  Name: String
+  Parameters:
+    String: String
+
+endsnippet
+snippet cfn-ApiGateway-Resource
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-resource.html
+Type: "AWS::ApiGateway::Resource"
+Properties:
+  ParentId: String
+  PathPart: String
+  RestApiId: String
+
+endsnippet
+snippet cfn-ApiGateway-Method
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-method.html
+Type: "AWS::ApiGateway::Method"
+Properties:
+  ApiKeyRequired: Boolean
+  AuthorizationType: String
+  AuthorizerId: String
+  HttpMethod: String
+  Integration:
+    Integration
+  MethodResponses:
+    - MethodResponse
+  OperationName: String
+  RequestModels:
+    String: String
+  RequestParameters:
+    String: Boolean
+  RequestValidatorId: String
+  ResourceId: String
+  RestApiId: String
+
+endsnippet
+snippet cfn-ApiGateway-BasePathMapping
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-basepathmapping.html
+Type: "AWS::ApiGateway::BasePathMapping"
+Properties:
+  BasePath: String
+  DomainName: String
+  RestApiId: String
+  Stage: String
+
+endsnippet
+snippet cfn-ApiGateway-DocumentationPart
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-documentationpart.html
+Type: "AWS::ApiGateway::DocumentationPart"
+Properties:
+  Location: 
+    Location
+  Properties: String
+  RestApiId: String
+endsnippet
+snippet cfn-ApiGateway-Deployment
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-deployment.html
+Type: "AWS::ApiGateway::Deployment"
+Properties:
+  Description: String
+  RestApiId: String
+  StageDescription: StageDescription
+  StageName: String
+
+endsnippet
+snippet cfn-ApiGateway-ApiKey
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-apikey.html
+Type: "AWS::ApiGateway::ApiKey"
+Properties: 
+  CustomerId: String
+  Description: String
+  Enabled: Boolean
+  GenerateDistinctId: Boolean
+  Name: String
+  StageKeys:
+    - StageKey
+    - ...
+endsnippet
+snippet cfn-ApiGateway-Account
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-account.html
+Type: "AWS::ApiGateway::Account"
+Properties: 
+  CloudWatchRoleArn: String
+endsnippet
+snippet cfn-ApiGateway-DomainName
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-domainname.html
+Type: "AWS::ApiGateway::DomainName"
+Properties: 
+  CertificateArn: String
+  DomainName: String
+  EndpointConfiguration: 
+    EndpointConfiguration
+  RegionalCertificateArn: String
+endsnippet
+snippet cfn-ApiGateway-UsagePlan
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-usageplan.html
+Type: "AWS::ApiGateway::UsagePlan"
+Properties:
+  ApiStages: 
+  - ApiStage
+  Description: String
+  Quota: QuotaSettings
+  Throttle: ThrottleSettings
+  UsagePlanName: String
+
+endsnippet
+snippet cfn-ApiGateway-UsagePlanKey
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-usageplankey.html
+Type: "AWS::ApiGateway::UsagePlanKey"
+Properties:
+  KeyId: String
+  KeyType: String
+  UsagePlanId: String
+
+endsnippet
+snippet cfn-ApiGateway-RequestValidator
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-requestvalidator.html
+Type: "AWS::ApiGateway::RequestValidator"
+Properties:
+  Name: String
+  RestApiId: String
+  ValidateRequestBody: Boolean
+  ValidateRequestParameters: Boolean
+endsnippet
+snippet cfn-ApiGateway-Stage
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-stage.html
+Type: "AWS::ApiGateway::Stage"
+Properties:
+  CacheClusterEnabled: Boolean
+  CacheClusterSize: String
+  ClientCertificateId: String
+  DeploymentId: String
+  Description: String
+  DocumentationVersion: String
+  MethodSettings:
+    - MethodSetting
+  RestApiId: String
+  StageName: String
+  Variables:
+    String: String
+
+endsnippet
+snippet cfn-ApiGateway-DocumentationVersion
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-documentationversion.html
+Type: "AWS::ApiGateway::DocumentationVersion"
+Properties:
+  Description: String
+  DocumentationVersion: String
+  RestApiId: String
+endsnippet
+snippet cfn-EFS-MountTarget
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-efs-mounttarget.html
+Type: "AWS::EFS::MountTarget"
+Properties:
+  FileSystemId: String
+  IpAddress: String
+  SecurityGroups:
+    [ String, ... ]
+  SubnetId: String
+
+endsnippet
+snippet cfn-EFS-FileSystem
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-efs-filesystem.html
+Type: "AWS::EFS::FileSystem"
+Properties: 
+  Encrypted: Boolean
+  FileSystemTags:
+    - FileSystemTags
+  KmsKeyId: String
+  PerformanceMode: String
+
+endsnippet
+snippet cfn-CertificateManager-Certificate
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-certificatemanager-certificate.html
+Type: "AWS::CertificateManager::Certificate"
+Properties: 
+  DomainName: String
+  DomainValidationOptions:
+    - DomainValidationOptions
+  SubjectAlternativeNames:
+    - String
+  Tags:
+    - Resource Tag
+endsnippet
+snippet cfn-Athena-NamedQuery
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-athena-namedquery.html
+Type: "AWS::Athena::NamedQuery"
+Properties:
+  Description: String
+  QueryString: String
+  Database: String
+  Name: String
+endsnippet
+snippet cfn-Route53-HealthCheck
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-healthcheck.html
+Type: "AWS::Route53::HealthCheck"
+Properties: 
+  HealthCheckConfig:
+    HealthCheckConfig
+  HealthCheckTags:
+    - HealthCheckTags 
+
+endsnippet
+snippet cfn-Route53-RecordSet
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordset.html
+Type: "AWS::Route53::RecordSet"
+Properties: 
+  AliasTarget: 
+    AliasTarget
+  Comment: String
+  Failover: String
+  GeoLocation:
+    GeoLocation
+  HealthCheckId: String
+  HostedZoneId: String
+  HostedZoneName: String
+  Name: String
+  Region: String
+  ResourceRecords:
+    - String
+  SetIdentifier: String
+  TTL: String
+  Type: String
+  Weight: Integer
+
+endsnippet
+snippet cfn-Route53-HostedZone
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-hostedzone.html
+Type: "AWS::Route53::HostedZone"
+Properties: 
+  HostedZoneConfig:
+    HostedZoneConfig
+  HostedZoneTags:
+    -  HostedZoneTags
+  Name: String
+  QueryLoggingConfig: String
+  VPCs:
+    - HostedZoneVPCs 
+
+endsnippet
+snippet cfn-Route53-RecordSetGroup
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordsetgroup.html
+Type: "AWS::Route53::RecordSetGroup"
+Properties: 
+  Comment: String
+  HostedZoneId: String
+  HostedZoneName: String
+  RecordSets:
+    - RecordSet1 
+
+endsnippet
+snippet cfn-EC2-RouteTable
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-route-table.html
+Type: "AWS::EC2::RouteTable"
+Properties: 
+  VpcId: String
+  Tags:
+    - Resource Tag
+
+endsnippet
+snippet cfn-EC2-Route
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-route.html
+Type: "AWS::EC2::Route"
+Properties: 
+  DestinationCidrBlock: String
+  DestinationIpv6CidrBlock: String
+  EgressOnlyInternetGatewayId: String
+  GatewayId: String
+  InstanceId: String
+  NatGatewayId: String
+  NetworkInterfaceId: String
+  RouteTableId: String
+  VpcPeeringConnectionId: String
+
+endsnippet
+snippet cfn-EC2-VPCCidrBlock
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpccidrblock.html
+Type: "AWS::EC2::VPCCidrBlock"
+Properties: 
+  AmazonProvidedIpv6CidrBlock: Boolean
+  CidrBlock: String
+  VpcId: String
+endsnippet
+snippet cfn-EC2-SpotFleet
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-spotfleet.html
+Type: "AWS::EC2::SpotFleet"
+Properties: 
+  SpotFleetRequestConfigData:
+    SpotFleetRequestConfigData
+
+endsnippet
+snippet cfn-EC2-VPCGatewayAttachment
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpc-gateway-attachment.html
+Type: "AWS::EC2::VPCGatewayAttachment"
+Properties: 
+  InternetGatewayId: String
+  VpcId: String
+  VpnGatewayId: String
+
+endsnippet
+snippet cfn-EC2-EgressOnlyInternetGateway
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-egressonlyinternetgateway.html
+Type: "AWS::EC2::EgressOnlyInternetGateway"
+Properties: 
+  VpcId: String
+
+endsnippet
+snippet cfn-EC2-NetworkInterface
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-network-interface.html
+Type: "AWS::EC2::NetworkInterface"
+Properties: 
+  Description: String
+  GroupSet:
+    - String
+  Ipv6AddressCount: Integer
+  Ipv6Addresses:
+    - Ipv6Address
+  PrivateIpAddress: String
+  PrivateIpAddresses:
+    - PrivateIpAddressSpecification
+  SecondaryPrivateIpAddressCount: Integer
+  SourceDestCheck: Boolean
+  SubnetId: String
+  Tags:
+    - Resource Tag
+
+endsnippet
+snippet cfn-EC2-VPCDHCPOptionsAssociation
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpc-dhcp-options-assoc.html
+Type: "AWS::EC2::VPCDHCPOptionsAssociation"
+Properties: 
+  DhcpOptionsId: String
+  VpcId: String
+
+endsnippet
+snippet cfn-EC2-NetworkInterfacePermission
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkinterfacepermission.html
+Type: "AWS::EC2::NetworkInterfacePermission"
+Properties:
+  AwsAccountId: String
+  NetworkInterfaceId: String
+  Permission: String
+endsnippet
+snippet cfn-EC2-VPC
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpc.html
+Type: "AWS::EC2::VPC"
+Properties: 
+  CidrBlock: String
+  EnableDnsSupport: Boolean
+  EnableDnsHostnames: Boolean
+  InstanceTenancy: String
+  Tags:
+    - Resource Tag 
+
+endsnippet
+snippet cfn-EC2-Volume
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ebs-volume.html
+Type: "AWS::EC2::Volume"
+Properties:
+  AutoEnableIO: Boolean
+  AvailabilityZone: String
+  Encrypted: Boolean
+  Iops: Number
+  KmsKeyId: String
+  Size: Integer
+  SnapshotId: String
+  Tags:
+    - Resource Tag
+  VolumeType: String
+
+endsnippet
+snippet cfn-EC2-FlowLog
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-flowlog.html
+Type: "AWS::EC2::FlowLog"
+Properties:
+  DeliverLogsPermissionArn : String
+  LogGroupName : String
+  ResourceId : String
+  ResourceType : String
+  TrafficType : String
+
+endsnippet
+snippet cfn-EC2-NetworkInterfaceAttachment
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-network-interface-attachment.html
+Type: "AWS::EC2::NetworkInterfaceAttachment"
+Properties: 
+  DeleteOnTermination: Boolean
+  DeviceIndex: String
+  InstanceId: String
+  NetworkInterfaceId: String
+
+endsnippet
+snippet cfn-EC2-SubnetRouteTableAssociation
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-subnet-route-table-assoc.html
+Type: "AWS::EC2::SubnetRouteTableAssociation"
+Properties: 
+  RouteTableId: String
+  SubnetId: String
+
+endsnippet
+snippet cfn-EC2-VolumeAttachment
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ebs-volumeattachment.html
+Type: AWS::EC2::VolumeAttachment
+Properties:
+  Device: String
+  InstanceId: String
+  VolumeId: String
+
+endsnippet
+snippet cfn-EC2-DHCPOptions
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-dhcp-options.html
+Type: "AWS::EC2::DHCPOptions"
+Properties:
+  DomainName: String
+  DomainNameServers:
+    - String
+  NetbiosNameServers:
+    - String
+  NetbiosNodeType: Number
+  NtpServers:
+    - String
+  Tags:
+    -Resource Tag
+
+endsnippet
+snippet cfn-EC2-SecurityGroupIngress
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-security-group-ingress.html
+Type: "AWS::EC2::SecurityGroupIngress"
+Properties: 
+  CidrIp: String
+  CidrIpv6: String
+  Description: String
+  FromPort: Integer
+  GroupId: String
+  GroupName: String
+  IpProtocol: String
+  SourceSecurityGroupName: String
+  SourceSecurityGroupId: String
+  SourceSecurityGroupOwnerId: String
+  ToPort: Integer
+
+endsnippet
+snippet cfn-EC2-InternetGateway
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-internetgateway.html
+Type: "AWS::EC2::InternetGateway"
+Properties: 
+  Tags:
+    - Resource Tag
+
+endsnippet
+snippet cfn-EC2-SubnetCidrBlock
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-subnetcidrblock.html
+Type: "AWS::EC2::SubnetCidrBlock"
+Properties: 
+  Ipv6CidrBlock: String
+  SubnetId: String
+endsnippet
+snippet cfn-EC2-NetworkAcl
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-network-acl.html
+Type: "AWS::EC2::NetworkAcl"
+Properties:
+  Tags:
+    - Resource Tag
+  VpcId: String
+
+endsnippet
+snippet cfn-EC2-EIPAssociation
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-eip-association.html
+Type: "AWS::EC2::EIPAssociation"
+Properties:
+  AllocationId: String
+  EIP: String
+  InstanceId: String
+  NetworkInterfaceId: String
+  PrivateIpAddress: String
+
+endsnippet
+snippet cfn-EC2-VPCPeeringConnection
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcpeeringconnection.html
+Type: "AWS::EC2::VPCPeeringConnection"
+Properties: 
+  PeerVpcId: String
+  Tags:
+    - Resource Tag
+  VpcId: String
+  PeerOwnerId: String
+  PeerRoleArn:  String
+
+endsnippet
+snippet cfn-EC2-NetworkAclEntry
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-network-acl-entry.html
+Type: "AWS::EC2::NetworkAclEntry"
+Properties: 
+  CidrBlock: String
+  Egress: Boolean
+  Icmp:
+    EC2 ICMP
+  Ipv6CidrBlock: String 
+  NetworkAclId: String
+  PortRange:
+    EC2 PortRange
+  Protocol: Integer
+  RuleAction : String
+  RuleNumber : Integer
+
+endsnippet
+snippet cfn-EC2-NatGateway
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-natgateway.html
+Type: "AWS::EC2::NatGateway"
+Properties: 
+  AllocationId: String
+  SubnetId: String
+  Tags: 
+    - Resource Tag
+
+endsnippet
+snippet cfn-EC2-CustomerGateway
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-customer-gateway.html
+Type: "AWS::EC2::CustomerGateway"
+Properties:
+  BgpAsn: Number
+  IpAddress: String
+  Tags:
+    Resource Tag
+  Type: String
+
+endsnippet
+snippet cfn-EC2-VPNGatewayRoutePropagation
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpn-gatewayrouteprop.html
+Type: "AWS::EC2::VPNGatewayRoutePropagation"
+Properties: 
+  RouteTableIds:
+    - String
+  VpnGatewayId: String
+
+endsnippet
+snippet cfn-EC2-SecurityGroup
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-security-group.html
+Type: "AWS::EC2::SecurityGroup"
+Properties: 
+  GroupName: String
+  GroupDescription: String
+  SecurityGroupEgress:
+    - Security Group Rule
+  SecurityGroupIngress:
+    - Security Group Rule
+  Tags:
+    - Resource Tag
+  VpcId: String
+
+endsnippet
+snippet cfn-EC2-Instance
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html
+Type: "AWS::EC2::Instance"
+Properties: 
+  Affinity: String
+  AvailabilityZone: String
+  BlockDeviceMappings: 
+    - EC2 Block Device Mapping
+  CreditSpecification: CreditSpecification
+  DisableApiTermination: Boolean
+  EbsOptimized: Boolean
+  ElasticGpuSpecifications: [ ElasticGpuSpecification, ... ]
+  HostId: String
+  IamInstanceProfile: String
+  ImageId: String
+  InstanceInitiatedShutdownBehavior: String
+  InstanceType: String
+  Ipv6AddressCount: Integer
+  Ipv6Addresses:
+    - IPv6 Address Type
+  KernelId: String
+  KeyName: String
+  Monitoring: Boolean
+  NetworkInterfaces: 
+    - EC2 Network Interface
+  PlacementGroupName: String
+  PrivateIpAddress: String
+  RamdiskId: String
+  SecurityGroupIds: 
+    - String
+  SecurityGroups: 
+    - String
+  SourceDestCheck: Boolean
+  SsmAssociations: 
+    - SSMAssociation
+  SubnetId: String
+  Tags: 
+    - Resource Tag
+  Tenancy: String
+  UserData: String
+  Volumes: 
+    - EC2 MountPoint
+  AdditionalInfo: String
+endsnippet
+snippet cfn-EC2-VPNConnection
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpn-connection.html
+Type: "AWS::EC2::VPNConnection"
+Properties: 
+  Type: String
+  CustomerGatewayId:
+    GatewayID
+  StaticRoutesOnly: Boolean
+  Tags:
+    - Resource Tag
+  VpnGatewayId:
+    GatewayID
+  VpnTunnelOptionsSpecifications: 
+    - VpnTunnelOptionsSpecification
+endsnippet
+snippet cfn-EC2-VPCEndpoint
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpoint.html
+Type: "AWS::EC2::VPCEndpoint"
+Properties: 
+  PolicyDocument: JSON object
+  RouteTableIds:
+    - String
+  ServiceName: String
+  VpcId: String
+
+endsnippet
+snippet cfn-EC2-SubnetNetworkAclAssociation
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-subnet-network-acl-assoc.html
+Type: "AWS::EC2::SubnetNetworkAclAssociation"
+Properties:
+  SubnetId: String
+  NetworkAclId: String 
+
+endsnippet
+snippet cfn-EC2-VPNGateway
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpn-gateway.html
+Type: "AWS::EC2::VPNGateway"
+Properties: 
+  AmazonSideAsn: Long
+  Type: String
+  Tags:
+    Resource Tag 
+
+endsnippet
+snippet cfn-EC2-VPNConnectionRoute
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpn-connection-route.html
+Type: "AWS::EC2::VPNConnectionRoute"
+Properties: 
+  DestinationCidrBlock: String
+  VpnConnectionId: String
+
+endsnippet
+snippet cfn-EC2-Subnet
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-subnet.html
+Type: "AWS::EC2::Subnet"
+Properties:
+  AssignIpv6AddressOnCreation: Boolean
+  AvailabilityZone: String
+  CidrBlock: String
+  Ipv6CidrBlock: String
+  MapPublicIpOnLaunch: Boolean
+  Tags:
+    - Resource Tag
+  VpcId: String
+
+endsnippet
+snippet cfn-EC2-EIP
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-eip.html
+Type: "AWS::EC2::EIP"
+Properties:
+  InstanceId: String
+  Domain: String
+
+endsnippet
+snippet cfn-EC2-Host
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-host.html
+Type: "AWS::EC2::Host"
+Properties: 
+  AutoPlacement: String
+  AvailabilityZone: String
+  InstanceType: String
+
+endsnippet
+snippet cfn-EC2-SecurityGroupEgress
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-security-group-egress.html
+Type: "AWS::EC2::SecurityGroupEgress"
+Properties:
+  CidrIp: String
+  CidrIpv6: String
+  Description: String
+  DestinationPrefixListId: String
+  DestinationSecurityGroupId:  String
+  FromPort: Integer
+  GroupId: String
+  IpProtocol: String
+  ToPort: Integer
+
+endsnippet
+snippet cfn-EC2-PlacementGroup
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-placementgroup.html
+Type: "AWS::EC2::PlacementGroup"
+Properties: 
+  Strategy: String
+
+endsnippet

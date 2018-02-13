@@ -1,0 +1,12 @@
+snippet cfn-WorkSpaces-Workspace
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspaces-workspace.html
+Type: "AWS::WorkSpaces::Workspace"
+Properties: 
+  BundleId: String
+  DirectoryId: String
+  UserName: String
+  RootVolumeEncryptionEnabled: Boolean
+  UserVolumeEncryptionEnabled: Boolean
+  VolumeEncryptionKey: String
+
+endsnippet

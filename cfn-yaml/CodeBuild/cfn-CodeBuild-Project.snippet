@@ -1,0 +1,23 @@
+snippet cfn-CodeBuild-Project
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-project.html
+Type: "AWS::CodeBuild::Project"
+Properties: 
+  Artifacts:
+    Artifacts
+  BadgeEnabled: Boolean
+  Cache: 
+    ProjectCache
+  Description: String
+  EncryptionKey: String
+  Environment:
+    Environment
+  Name: String
+  ServiceRole: String
+  Source:
+    Source
+  Tags:
+    - Resource Tag
+  TimeoutInMinutes: Integer
+  VpcConfig: 
+    VpcConfig
+endsnippet

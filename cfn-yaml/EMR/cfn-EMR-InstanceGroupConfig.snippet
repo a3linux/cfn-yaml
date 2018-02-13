@@ -1,0 +1,19 @@
+snippet cfn-EMR-InstanceGroupConfig
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emr-instancegroupconfig.html
+Type: "AWS::EMR::InstanceGroupConfig"
+Properties: 
+  AutoScalingPolicy:
+    AutoScalingPolicy
+  BidPrice: String
+  Configurations:
+    - Configuration
+  EbsConfiguration" :
+    EBSConfiguration
+  InstanceCount" : Integer
+  InstanceRole" : String
+  InstanceType" : String
+  JobFlowId": String
+  Market" : String
+  Name" : String
+
+endsnippet

@@ -1,0 +1,26 @@
+snippet cfn-DMS-Endpoint
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-endpoint.html
+Type: "AWS::DMS::Endpoint"
+Properties:
+  CertificateArn: String
+  DatabaseName: String
+  DynamoDbSettings:
+    DynamoDbSettings
+  EndpointIdentifier: String
+  EndpointType: String
+  EngineName: String
+  ExtraConnectionAttributes: String
+  KmsKeyId: String
+  MongoDbSettings: 
+    MongoDbSettings
+  Password: String
+  Port: Integer
+  S3Settings:
+    S3Settings
+  ServerName: String
+  SslMode: String
+  Tags:
+    - Resource Tag
+  Username: String 
+
+endsnippet

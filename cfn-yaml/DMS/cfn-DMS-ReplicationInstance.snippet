@@ -1,0 +1,20 @@
+snippet cfn-DMS-ReplicationInstance
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationinstance.html
+Type: "AWS::DMS::ReplicationInstance"
+Properties:
+  AllocatedStorage: Integer
+  AutoMinorVersionUpgrade: Boolean
+  AvailabilityZone: String
+  EngineVersion: String
+  KmsKeyId: String
+  MultiAZ: Boolean
+  PreferredMaintenanceWindow: String
+  PubliclyAccessible: Boolean
+  ReplicationInstanceClass: String
+  ReplicationInstanceIdentifier: String
+  ReplicationSubnetGroupIdentifier: String
+  Tags: 
+    - Resource Tag
+  VpcSecurityGroupIds:
+    - String
+endsnippet

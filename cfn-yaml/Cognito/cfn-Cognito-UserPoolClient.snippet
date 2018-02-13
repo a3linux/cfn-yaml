@@ -1,0 +1,16 @@
+snippet cfn-Cognito-UserPoolClient
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html
+Type: "AWS::Cognito::UserPoolClient"
+Properties:
+    ClientName: String,
+    ExplicitAuthFlows: 
+      - String
+    GenerateSecret: Boolean
+    ReadAttributes: 
+      - String
+    RefreshTokenValidity: Integer
+    UserPoolId: String
+    WriteAttributes: 
+      - String
+
+endsnippet

@@ -1,0 +1,32 @@
+snippet cfn-OpsWorks-Instance
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-instance.html
+Type: "AWS::OpsWorks::Instance"
+Properties:
+  AgentVersion: String
+  AmiId: String
+  Architecture: String
+  AutoScalingType: String
+  AvailabilityZone: String
+  BlockDeviceMappings: 
+  - BlockDeviceMapping
+  EbsOptimized: Boolean
+  ElasticIps: 
+  - String
+  Hostname: String
+  InstallUpdatesOnBoot: Boolean
+  InstanceType: String
+  LayerIds: 
+  - String
+  Os: String
+  RootDeviceType: String
+  SshKeyName: String
+  StackId: String
+  SubnetId: String
+  Tenancy: String
+  TimeBasedAutoScaling:
+  TimeBasedAutoScaling
+  VirtualizationType: String
+  Volumes: 
+  - String
+
+endsnippet

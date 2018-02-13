@@ -1,0 +1,19 @@
+snippet cfn-GameLift-Fleet
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html
+Type: "AWS::GameLift::Fleet"
+Properties: 
+  BuildId: String
+  Description: String
+  DesiredEC2Instances: Integer
+  EC2InboundPermissions:
+    - EC2InboundPermission
+  EC2InstanceType: String
+  LogPaths:
+    [ String, ... ]
+  MaxSize: Integer
+  MinSize: Integer
+  Name: String
+  ServerLaunchParameters: String
+  ServerLaunchPath: String
+
+endsnippet

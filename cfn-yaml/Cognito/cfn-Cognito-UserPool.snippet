@@ -1,0 +1,32 @@
+snippet cfn-Cognito-UserPool
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html
+Type: "AWS::Cognito::UserPool"
+Properties:
+  AdminCreateUserConfig: 
+    AdminCreateUserConfig
+  AliasAttributes: 
+    - String
+  AutoVerifiedAttributes: 
+    - String
+  DeviceConfiguration: 
+    DeviceConfiguration
+  EmailConfiguration: 
+    EmailConfiguration
+  EmailVerificationMessage: String
+  EmailVerificationSubject: String
+  LambdaConfig: 
+    LambdaConfig
+  MfaConfiguration: String
+  Policies: 
+    Policies
+  UserPoolName: String
+  Schema: 
+    - SchemaAttribute
+  SmsAuthenticationMessage: String
+  SmsConfiguration: 
+    SmsConfiguration
+  SmsVerificationMessage: String
+  UserPoolTags: 
+    String: String
+
+endsnippet

@@ -1,0 +1,13 @@
+snippet cfn-Cloud9-EnvironmentEC2
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloud9-environmentec2.html
+Type: "AWS::Cloud9::EnvironmentEC2"
+Properties:
+  Repositories: 
+    - Repository
+  OwnerArn: String
+  Description: String
+  AutomaticStopTimeMinutes: Integer
+  InstanceType: String
+  Name: String
+  SubnetId: String
+endsnippet

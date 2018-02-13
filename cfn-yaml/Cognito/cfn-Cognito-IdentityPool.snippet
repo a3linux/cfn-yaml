@@ -1,0 +1,23 @@
+snippet cfn-Cognito-IdentityPool
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-identitypool.html
+Type: "AWS::Cognito::IdentityPool"
+Properties:
+  IdentityPoolName: String
+  AllowUnauthenticatedIdentities: Boolean
+  DeveloperProviderName: String
+  SupportedLoginProviders: 
+    String: String
+  CognitoIdentityProviders: 
+    - CognitoIdentityProvider
+  SamlProviderARNs: 
+    - String
+  OpenIdConnectProviderARNs: 
+    - String
+  CognitoStreams: 
+    - CognitoStreams
+  PushSync: 
+    - PushSync
+  CognitoEvents: 
+    String: String
+
+endsnippet

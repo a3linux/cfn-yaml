@@ -1,0 +1,13 @@
+snippet cfn-AutoScaling-ScheduledAction
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-as-scheduledaction.html
+Type: AWS::AutoScaling::ScheduledAction
+Properties:
+  AutoScalingGroupName: String
+  DesiredCapacity: Integer
+  EndTime: Time stamp
+  MaxSize: Integer
+  MinSize: Integer
+  Recurrence: String
+  StartTime: Time stamp
+
+endsnippet

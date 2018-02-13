@@ -1,0 +1,14 @@
+snippet cfn-ElasticLoadBalancingV2-Listener
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-listener.html
+Type: "AWS::ElasticLoadBalancingV2::Listener"
+Properties: 
+  Certificates:
+    - Certificate
+  DefaultActions:
+    - Action
+  LoadBalancerArn: String
+  Port: Integer
+  Protocol: String
+  SslPolicy: String
+
+endsnippet

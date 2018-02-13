@@ -1,0 +1,14 @@
+snippet cfn-EMR-InstanceFleetConfig
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticmapreduce-instancefleetconfig.html
+Type: "AWS::EMR::InstanceFleetConfig"
+Properties: 
+  ClusterId: String
+  InstanceFleetType: String
+  InstanceTypeConfigs:
+    - InstanceTypeConfig
+  LaunchSpecifications:
+    InstanceFleetProvisioningSpecifications
+  Name: String
+  TargetOnDemandCapacity: Integer
+  TargetSpotCapacity: Integer
+endsnippet

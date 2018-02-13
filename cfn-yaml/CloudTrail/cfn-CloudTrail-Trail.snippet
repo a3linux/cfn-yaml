@@ -1,0 +1,21 @@
+snippet cfn-CloudTrail-Trail
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-trail.html
+Type: "AWS::CloudTrail::Trail"
+Properties:
+  CloudWatchLogsLogGroupArn: String
+  CloudWatchLogsRoleArn: String
+  EnableLogFileValidation: Boolean
+  EventSelectors:
+    - EventSelector
+  IncludeGlobalServiceEvents: Boolean
+  IsLogging: Boolean
+  IsMultiRegionTrail: Boolean
+  KMSKeyId: String
+  S3BucketName: String
+  S3KeyPrefix: String
+  SnsTopicName: String
+  Tags:
+    - Resource Tag
+  TrailName: String
+      
+endsnippet

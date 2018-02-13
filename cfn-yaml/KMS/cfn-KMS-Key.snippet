@@ -1,0 +1,12 @@
+snippet cfn-KMS-Key
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kms-key.html
+Type: "AWS::KMS::Key"
+Properties: 
+  Description: String
+  Enabled: Boolean
+  EnableKeyRotation: Boolean
+  KeyPolicy: JSON object
+  Tags:
+    - Resource Tag
+
+endsnippet

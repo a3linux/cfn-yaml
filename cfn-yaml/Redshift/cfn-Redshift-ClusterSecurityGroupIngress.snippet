@@ -1,0 +1,10 @@
+snippet cfn-Redshift-ClusterSecurityGroupIngress
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-clustersecuritygroupingress.html
+Type: "AWS::Redshift::ClusterSecurityGroupIngress"
+Properties: 
+  ClusterSecurityGroupName: String
+  CIDRIP: String
+  EC2SecurityGroupName: String
+  EC2SecurityGroupOwnerId: String
+
+endsnippet

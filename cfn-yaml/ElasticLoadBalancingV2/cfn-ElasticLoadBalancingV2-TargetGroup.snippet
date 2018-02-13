@@ -1,0 +1,25 @@
+snippet cfn-ElasticLoadBalancingV2-TargetGroup
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-targetgroup.html
+Type: "AWS::ElasticLoadBalancingV2::TargetGroup"
+Properties:
+  HealthCheckIntervalSeconds: Integer
+  HealthCheckPath: String
+  HealthCheckPort: String
+  HealthCheckProtocol: String
+  HealthCheckTimeoutSeconds: Integer
+  HealthyThresholdCount: Integer
+  Matcher: Matcher
+  Name: String
+  Port: Integer
+  Protocol: String
+  Tags:
+    - Resource Tag
+  TargetGroupAttributes:
+    - TargetGroupAttributes
+  Targets:
+    - TargetDescription
+  TargetType: String
+  UnhealthyThresholdCount: Integer
+  VpcId: String
+
+endsnippet

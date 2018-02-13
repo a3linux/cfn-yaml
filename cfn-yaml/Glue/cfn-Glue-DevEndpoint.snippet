@@ -1,0 +1,14 @@
+snippet cfn-Glue-DevEndpoint
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-devendpoint.html
+Type: "AWS::Glue::DevEndpoint"
+Properties:
+  EndpointName: String
+  ExtraJarsS3Path: String
+  ExtraPythonLibsS3Path: String
+  NumberOfNodes: Integer
+  PublicKey: String
+  RoleArn: String
+  SecurityGroupIds: 
+    - String
+  SubnetId: String
+endsnippet

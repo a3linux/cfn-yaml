@@ -1,0 +1,12 @@
+snippet cfn-EC2-VPCPeeringConnection
+#AWS-DOC http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcpeeringconnection.html
+Type: "AWS::EC2::VPCPeeringConnection"
+Properties: 
+  PeerVpcId: String
+  Tags:
+    - Resource Tag
+  VpcId: String
+  PeerOwnerId: String
+  PeerRoleArn:  String
+
+endsnippet
