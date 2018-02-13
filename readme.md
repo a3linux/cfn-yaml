@@ -2,6 +2,12 @@
 #YAML CloudFormation Template Snippet Set for Sublime Text 3
 
 
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+>  For VIM User                                                              >
+>  Added simple way to generate Vim UltiSnips format snippets.               >
+>  Or copy the **yaml_awscfn.snippets** directly to your UltiSnips folder.   >
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
 cfn-yaml is a sublime text 3 package of snippets for cloudfront yaml syntax.
 
 The snippet set is created from the AWS documentation as the master defintion for the YAML content and includes a comment within each snippet referencing back to the [AWS Reference documentation pages](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-template-resource-type-ref.html) for easy right-click opening of the documentation related to the snippet.  This is obviously included to make it quick and easy to get back to the documentation related to the function being configured.
@@ -15,7 +21,7 @@ Should you wish to remove the documentation links after you've finished creating
 ```
 Usage:
 
-# Easiest way to get to use these snippets is simply to clone this repo into your 
+# Easiest way to get to use these snippets is simply to clone this repo into your
 # Sublime Text 3 User Packages folder.
 
 cd ~/.config/sublime-text-3/Packages/User
