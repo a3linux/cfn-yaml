@@ -21,7 +21,6 @@ import sys
 import os
 import requests
 from bs4 import BeautifulSoup
-# import re
 
 
 def get_cfn_res_list():
@@ -36,8 +35,8 @@ def get_cfn_res_list():
         docpage = requests.get("%s/aws-template-resource-type-ref.html" %
                                docurl)
         htmldoc = docpage.content
-    except Exception as e:
-        print("Error when fetch AWS Document: %s!" % e)
+    except Exception as exc:
+        print("Error when fetch AWS Document: %s!" % exc)
         sys.exit(1)
 
     soup = BeautifulSoup(htmldoc, 'html.parser')
@@ -58,22 +57,22 @@ def gen_cfn_snippets(urllist):
 
     """
     for (pagelink, pageurl) in urllist:
-        hotkey = ""
-        snippet = ""
+        _hotkey = ""
+        _snippet = ""
         pagelinklist = pagelink.split("::")
-        hotkey = "cfn-" + pagelinklist[1]
+        _hotkey = "cfn-" + pagelinklist[1]
         for i in range(2, len(pagelinklist)):
-            hotkey = hotkey + "-" + pagelinklist[i]
+            _hotkey = "%s-%s" % (_hotkey, pagelinklist[i])
 
-        snippet = "snippet %s" % hotkey
-        snippet = snippet + "\n#AWS-DOC " + pageurl
+        _snippet = "snippet %s" % _hotkey
+        _snippet = _snippet + "\n#AWS-DOC " + pageurl
 
         try:
             page = requests.get(pageurl).content
             soup = BeautifulSoup(page, 'html.parser')
             fragment = soup.select_one('#YAML pre')
-        except Exception as e:
-            print(e)
+        except Exception as exc:
+            print(exc)
         for tag in fragment:
             # Some source material has an extra \n that needs to be stripped
             snippetfilter = tag.text
@@ -81,10 +80,10 @@ def gen_cfn_snippets(urllist):
                 # skip blank tag(s), it might be the code function buttons
                 continue
             if snippetfilter[0] == '\n':
-                snippet = "%s\n%s" % (snippet, snippetfilter[1:])
+                _snippet = "%s\n%s" % (_snippet, snippetfilter[1:])
             else:
-                snippet = "%s\n%s" % (snippet, tag .text)
-        yield (pagelinklist[1], hotkey, "%s\n%s" % (snippet, "endsnippet"))
+                _snippet = "%s\n%s" % (_snippet, tag .text)
+        yield (pagelinklist[1], _hotkey, "%s\n%s" % (_snippet, "endsnippet"))
 
 
 # Create the folder for the snippets
@@ -104,5 +103,5 @@ for (name, hotkey, snippet) in gen_cfn_snippets(get_cfn_res_list()):
             os.mkdir(path)
         with open(filepath, 'w') as f:
             f.write(snippet)
-    except Exception as e:
-        print(e)
+    except Exception as exc:
+        print(exc)
